@@ -1,3 +1,67 @@
 mixin footer()
 	//block footer
+	.footer
+		.footer__dark
+			.main-cont
+				.footer__top
+					.footer__list
+						-
+							var items = [
+							'Сеты',
+							'Роллы',
+							'Суши',
+							'Пицца',
+							'Пироги',
+							'Лапша WOK',
+							'Fast food',
+							'Бизнес-ланч',
+							'Комбо-меню',
+							'Супы',
+							'Паста',
+							'Гриль-меню',
+							'Салаты',
+							'Десерты',
+							'Напитки',
+							'Соусы'
+							];
+						each item in items
+							a(href="#").footer__list-el #{item}
+					.footer-contact
+						.footer-contact__phone
+							a(href="tel:8 (3452) 68-10-89").footer-contact__phone-el 8 (3452) 68-10-89
+							a(href="tel:8 (3452) 90-00-90").footer-contact__phone-el 8 (3452) 90-00-90
+						.footer__time
+							.footer__time-el Вс – Чт
+								span
+								| с 09:00 до 00:00
+							.footer__time-el Пт – Сб
+								span
+								| с 09:00 до 01:00
+		.footer__bottom
+			.main-cont
+				.footer__bottom-wrap
+					.footer__copy
+						.footer__copy-text © 2012-2016 <br> Ресторан доставки
+							span Pro-Porcia
+						a(href="#").footer__copy-link Политика конфиденциальности
+						a(href="#").footer__copy-link Публичная оферта
+					.footer__bottom-menu
+						-
+							var items = [
+							"Акции",
+							"Отзывы",
+							"Доставка и оплата",
+							"Новости",
+							"Вакансии",
+							"О компании"
+							];
+						each item in items
+							a(href="#").footer__bottom-menu-el #{item}
+					.footer__pay
+						.footer__pay-row
+							.footer__pay-row__el
+								+icon("master","icon")
+							.footer__pay-row__el.footer__pay-row__el--visa
+								+icon("visa","icon")
+						.footer__pay-text Вы можете оплатить покупки картой онлайн, либо выбрать другой способ оплаты.
 	//block footer end

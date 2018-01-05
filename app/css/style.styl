@@ -37,6 +37,9 @@ body
 .main-cont
 	center(1200px,10px)
 
+.rub
+	display: inline
+
 .nice-select
 	br(0)
 	margin-bottom: 20px
@@ -63,3 +66,430 @@ select.select-beauty
 .nice-select:active, .nice-select.open, .nice-select:focus
 	border 1px solid $border-color
 
+.flag
+	width: 50px
+	height: 65px
+	background: $green
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%)
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%)
+	flex(mid)
+
+.flag-content
+	.icon
+		size 25px
+		fill white
+
+
+.header-black
+	background: black
+//.head
+//.main-cont
+.head-slim
+	padding: 25px 0
+	flex(between)
+.head-slim__list
+	flex(between)
+	width: 55%
+.head-slim__list-el
+	tr(all)
+	color white
+	opacity .4
+	&:hover
+		opacity 1
+		color white
+.head-slim__list-soc
+	flex(between)
+.head-slim__list-soc-el
+	flex(mid)
+	margin-left: 25px
+	.icon
+		tr(all)
+		&:hover
+			opacity 1
+		size 25px
+		fill white
+		opacity .4
+
+.head-slim__list-soc-el--inst
+	.icon
+		size 20px
+
+.head-slim__list-soc-el--apple
+	.icon
+		size 23px
+
+//.header-nav
+//.main-cont
+.header-nav__wrap
+	height: 140px
+	f()
+	background: white
+	margin-bottom: 50px
+.header-nav__logo
+	width: 15%
+	flex(mid)
+	.icon
+		width: 70%
+.header-nav__menu
+	flex(mid)
+	fl()
+	cp()
+	tr(all)
+	background: $green
+	width: 140px
+	&:hover
+		background:#31cf19
+
+.header-nav__menu-icon
+	.icon
+		size 50px
+		fill white
+.header-nav__menu-text
+	color white
+	font-family Bebas
+	font-size 18px
+.header-nav-info
+	width: 50%
+	flex(between)
+	padding: 0 4%
+//.header-nav-info__phone
+.header-nav-info__phone-number
+	margin-bottom: 5px
+	@extend .type--lg
+	span
+		color: #9b9b9b
+		display: inline-block
+		margin-right:8px
+
+.header-nav-info__phone-text
+	color red
+	cp()
+
+//.header-nav-info__time
+.header-nav-info__time-el
+	&:first-child
+		margin-bottom: 15px
+	span
+		display: inline-block
+		width: 45px
+		height: 1px
+		border-bottom 1px solid #e5e5e5
+		margin: 0 5px
+.header-nav__enter
+	cp()
+	flex(mid)
+	fl()
+	width: 140px
+	border-left 1px solid #e5e5e5
+	&:hover
+		.icon
+			fill black
+		.header-nav__enter-text
+			color $green
+
+.header-nav__enter-icon
+	.icon
+		tr(all)
+		size 40px
+		fill #a8a8a8
+.header-nav__enter-text
+	font-family Bebas
+	font-size 18px
+	tr(all)
+.header-nav__cart
+	cp()
+	border-left 1px solid #e5e5e5
+	flex(mid)
+	fl()
+	width: 140px
+	&:hover
+		.icon
+			fill black
+		.header-nav__cart-text
+			color $green
+
+.header-nav__cart-icon
+	position: relative
+	.icon
+		tr(all)
+		size 40px
+		fill #a8a8a8
+.header-nav__cart-text
+	font-family Bebas
+	font-size 18px
+	tr(all)
+
+.header-nav__cart-val
+	flex(mid)
+	round()
+	size 25px
+	background: $red
+	color white
+	position: absolute
+	font-size: 12px
+	right -12px
+	top -5px
+
+.pattern-black
+	background-image: url(../img/pattern.png)
+	position: relative
+	background-color: black
+	background-repeat: repeat
+	-webkit-background-size: 200px
+	background-size: 200px
+
+.banner
+	f()
+	justify-content: space-between
+	margin-bottom: 85px
+
+.banner-img
+	padding: 20% 38%
+	background: black
+	background-repeat: no-repeat
+	background-size: cover
+
+.banner-state__col
+	width: 22%
+	flex(between)
+	fw()
+	fl()
+.banner-state
+	border 1px solid rgba(255, 255, 255, 0.2)
+	height: 48%
+	position: relative
+	padding: 10%
+	flex(between)
+	fl()
+	.flag
+		position: absolute
+		top 0
+		right: 20px
+
+.banner-state__title
+	+below(1024px)
+		font-size: 20px
+	@extend .type--lg
+	color white
+	width: 100%
+
+.banner-state__text
+	+below(1024px)
+		font-size: 12px
+	color white
+
+
+//.footer
+.footer__dark
+	@extend .pattern-black
+//.main-cont
+.footer__top
+	f()
+	justify-content: space-between
+	padding: 60px 0
+
+.footer__list
+	width: 65%
+	display: grid
+	grid-template-rows: repeat(4, auto)
+	grid-gap: 10px
+	grid-auto-flow: column
+
+.footer__list-el
+	tr(all)
+	color rgba(255, 255, 255, 0.71)
+	&:hover
+		color white
+
+.footer-contact
+	width: 30%
+
+.footer-contact__phone
+	margin-bottom: 20px
+
+.footer-contact__phone-el
+	@extend .type--md
+	color white
+	display: block
+	margin-bottom: 10px
+	&:hover
+		color white
+
+.footer__time-el
+	color white
+	&:first-child
+		margin-bottom: 15px
+	span
+		display: inline-block
+		width: 45px
+		height: 1px
+		border-bottom 1px solid #e5e5e5
+		margin: 0 5px
+
+.footer__bottom
+	padding: 60px 0
+
+.footer__bottom-wrap
+	f()
+	justify-content: space-between
+
+.footer__copy
+	width: 28%
+
+.footer__copy-text
+	@extend .type--md
+	margin-bottom: 15px
+	span
+		color $green
+
+.footer__copy-link
+	margin-bottom: 10px
+	display: inline-block
+
+.footer__bottom-menu
+	width: 34%
+	display: grid
+	grid-template-rows: repeat(3, 40px)
+	grid-gap: 10px
+	grid-auto-flow: column
+
+//.footer__bottom-menu-el
+.footer__pay
+	width: 30%
+
+.footer__pay-row
+	f()
+	margin-bottom: 10px
+	.icon
+		width: 55px
+		height: 45px
+
+.footer__pay-row__el--visa
+	margin-left: 10px
+	.icon
+		width: 65px
+
+.footer__pay-text
+	line-height: 1.6
+
+.section-content
+	padding: 60px 0
+//.main-cont
+
+.title--section
+	text-align: center
+	text-transform: uppercase
+	@extend .type--xl
+	margin-bottom: 60px
+
+.item-wrap
+	+below(1024px)
+		grid-template-columns: repeat(3, 1fr)
+	+below(768px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(640px)
+		grid-template-columns: repeat(1, 1fr)
+	display grid
+	grid-template-columns: repeat(4, 1fr)
+	grid-gap: 20px
+
+.item-el
+	border 1px solid #d9d9d9
+
+.item-el__img
+	bg-full()
+	padding: 35%
+
+.item-el__content
+	padding: 20px
+
+.item-el__title
+	@extend .type--lg
+	margin-bottom: 10px
+
+.item-el__text
+	line-height: 1.6
+
+.item-el__info
+	f()
+	border-top 1px solid #d9d9d9
+	border-bottom 1px solid #d9d9d9
+
+.item-el__info-price
+	width: 50%
+	text-align: center
+	@extend .type--md
+	padding: 15px 0
+	border-right 1px solid #d9d9d9
+
+.item-el__info-get
+	@extend .type--md
+	flex(mid)
+	cp()
+	tr(all)
+	text-align: center
+	width: 50%
+	&:hover
+		background: $green
+		color white
+		.icon
+			fill white
+	.icon
+		tr(all)
+		size 15px
+.item-el__add
+	flex(mid)
+	width: 100%
+.item-el__info-get-text
+	margin-right: 5px
+
+.item-el__info-get-plus
+	fill $green
+
+.item-el__descr
+	padding: 15px 0
+	text-align: center
+	color #919191
+
+.item-el-slider
+	+below(1024px)
+		grid-column: 1 / 4
+	+below(768px)
+		grid-column: 1 / 3
+	+below(640px)
+		grid-column: 1 / 2
+	background:gray
+	grid-column: 3 / 5
+
+
+
+
+.item-el__incr
+	display: none
+	width: 100%
+	height: 100%
+	.incr
+		+below(768px)
+			margin-bottom: 20px
+		f()
+		width: 100%
+		justify-content: space-between
+		position relative
+		background: $green
+		height: 100%
+	.incr__nav
+		flex(mid)
+		width: 35%
+		.icon
+			size 15px
+			fill white
+	.incr__val
+		flex(mid)
+		color white
+		font-weight 400
+.item-el__info-get--incr
+	.item-el__add
+		display: none
+	.item-el__incr
+		flex(mid)
+	background: $green

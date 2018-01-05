@@ -1,37 +1,59 @@
 mixin header()
 	//block header
-	.main-section(style="background-image:url('https://static.pexels.com/photos/158607/cairn-fog-mystical-background-158607.jpeg')")
-		.main-section-filter
-		.header
-			.header-layer
-				.main-cont
-					.header-wrap
-						a(href="#").header-logo Logo
-							//img(src="img/logo-main.svg", alt="")
-						.header-nav
-							- var items = ['О нас','Декларация 3-НДФЛ','Налоги','Покупка жилья','Другие вычеты','Полезное'];
-							each item in items
-								.header-nav__el
-									.header-nav__el-link-wrap
-										a(href="#").header-nav__el-link #{item}
-										.header-nav__el-icon
-											+icon("arrow-down","icon-el")
-									.header-nav__sub
-										.coner-wrap
-											.window-coner-top
-											.header-nav__sub-wrap
-												a(href="#").header-nav__sub-el О компании
-												a(href="#").header-nav__sub-el Контакты
-												a(href="#").header-nav__sub-el Карьера
-												a(href="#").header-nav__sub-el Отзывы клиентов
-												a(href="#").header-nav__sub-el Преимущества
-												a(href="#").header-nav__sub-el Безопасность
-												a(href="#").header-nav__sub-el Новости и советы
-						.header-contact
-							.header-phone
-								a(href="tel:8(495)123-12-12") 8(495)123-12-12
-						.menu-toggle
-							+icon("menu","icon-el")
-		.main-section-cont
-			.main-section-title this is template
+	.head
+		//header-slim
+		.main-cont
+			.head-slim
+				.head-slim__list
+					-
+						var items = [
+						'Доставка и оплата',
+						'Акции',
+						'Отзывы',
+						'Новости',
+						'Вакансии',
+						'О компании'
+						];
+					each item in items
+						a(href="#").head-slim__list-el #{item}
+				.head-slim__list-soc
+					a(href="#").head-slim__list-soc-el
+						+icon("soc-vk","icon")
+					a(href="#").head-slim__list-soc-el.head-slim__list-soc-el--inst
+						+icon("soc-instagram","icon")
+					a(href="#").head-slim__list-soc-el.head-slim__list-soc-el--apple
+						+icon("apple","icon")
+		.header-nav
+			.main-cont
+				.header-nav__wrap
+					a(href="/").header-nav__logo
+						+icon("logo--md--color","icon")
+					.header-nav__menu
+						.header-nav__menu-icon
+							+icon("menu","icon")
+						.header-nav__menu-text Меню
+					.header-nav-info
+						.header-nav-info__phone
+							.header-nav-info__phone-number
+								span 8 (3452)
+								| 90-00-90
+							.header-nav-info__phone-text Перезвоните мне
+						.header-nav-info__time
+							.header-nav-info__time-el Вс – Чт
+								span
+								| с 09:00 до 00:00
+							.header-nav-info__time-el Пт – Сб
+								span
+								| с 09:00 до 01:00
+					.header-nav__enter
+						.header-nav__enter-icon
+							+icon("login","icon")
+						.header-nav__enter-text Войти
+					.header-nav__cart
+						.header-nav__cart-icon
+							.header-nav__cart-val
+								span 10
+							+icon("cart","icon")
+						.header-nav__cart-text 2500
+							.rub o
 	//block header end

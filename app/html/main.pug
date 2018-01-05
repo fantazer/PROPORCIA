@@ -1,12 +1,54 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-.main-cont
-	.bebas я BEBAS
-	.liana я liana
-	.Roboto я ROBOT
-	a(href="#").link Ссылка
-	a(href="#").link--mark Ссылка
+.pattern-black
+	+header()
+	//banner
+	.main-cont
+		.banner
+			.banner-img(style="background-image:url('img/main-banner.jpg')")
+			.banner-state__col
+				.banner-state
+					.flag
+						.flag-content
+							+icon("box","icon")
+					.banner-state__title Бесплатная <br> Доставка
+					.banner-state__text При заказе от 500 руб. только по Тюмени
+				.banner-state
+					.flag
+						.flag-content
+							+icon("bonus","icon")
+					.banner-state__title Бесплатная <br> Доставка
+					.banner-state__text При заказе от 500 руб. только по Тюмени
 
-
+.section-content
+	.main-cont
+		.title--section Популярное на этой неделе
+		.item-wrap
+			- for (var i=0;i<6;i++)
+				.item-el
+					.item-el__img(style="background-image:url('img/item-1.jpg')")
+					.item-el__content
+						.item-el__title Суши с креветкой и ананасом
+						.item-el__text Свежая булочка, котлета из говядины, сыр, соленый огурец, лук, соус сырный ...
+					.item-el__info
+						.item-el__info-price 350
+							span.rub o
+						.item-el__info-get
+							.item-el__add
+								.item-el__info-get-text Хочу
+								.item-el__info-get-plus
+									+icon("plus","icon")
+							.item-el__incr
+								.incr
+									.incr__minus.incr__nav
+										+icon("minus","icon")
+									.incr__val
+										span 1
+										.incr__val-coner
+									.incr__plus.incr__nav
+										+icon("plus","icon")
+					.item-el__descr 150 г. (185 Ккал/100г)
+			.item-el-slider as
++footer()
 include ./block_html/_script.pug
