@@ -1,0 +1,27 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.pattern-black
+	+header()
+	.head-title
+		.head-title__sub Акции
+		.head-title__text Самые горячие в этом месяце
+
+	//bread
+	.bread-row
+		.bread
+			a(href="#").bread__el Пункт 1
+			a(href="#").bread__el Пункт 2
+			a(href="#").bread__el Пункт 3
+	.main-cont
+		.discount-list
+			- for (var i=0;i<3;i++)
+				.discount-el
+					a(href="#" style="background-image:url('img/discount.jpg')").discount-el__img
+					.discount-el__wrapper
+						a(href="#").discount-el__title С 8 Марта! дорогие женщины
+						.discount-el__date 05 Марта, 2017
+
+.footer-slim
+	+footer()
+include ./block_html/_script.pug

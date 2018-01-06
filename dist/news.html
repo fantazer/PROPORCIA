@@ -1,1 +1,320 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<!--create by ANATOLY KUZNETSOV-->
 
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<!--colors-tabs-->
+		<meta name="theme-color" content="#000" />
+		<meta name="msapplication-navbutton-color" content="#000" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+		<!--icons
+	link(rel="shortcut icon" href="img/fav/favicon.ico")
+	link(rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-touch-icon-57x57.png")
+	link(rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-touch-icon-60x60.png")
+	link(rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-touch-icon-72x72.png")
+	link(rel="apple-touch-icon" sizes="76x76" href="img/fav/apple-touch-icon-76x76.png")
+	link(rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-touch-icon-114x114.png")
+	link(rel="apple-touch-icon" sizes="120x120" href="img/fav/apple-touch-icon-120x120.png")
+	link(rel="apple-touch-icon" sizes="144x144" href="img/fav/apple-touch-icon-144x144.png")
+	link(rel="apple-touch-icon" sizes="152x152" href="img/fav/apple-touch-icon-152x152.png")
+	link(rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon-180x180.png")
+	meta(name="apple-mobile-web-app-capable" content="yes")
+	meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+	meta(name="apple-mobile-web-app-title" content="My App")
+	link(rel="yandex-tableau-widget" href="img/fav/yandex-browser-manifest.json")
+	link(rel="icon" type="image/png" sizes="228x228" href="img/fav/coast-228x228.png")
+	link(rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png")
+	link(rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png")
+	link(rel="manifest" href="img/fav/manifest.json")
+	meta(name="mobile-web-app-capable" content="yes")
+	meta(name="theme-color" content="#020307")
+	meta(name="application-name" content="My App")
+	meta(name="msapplication-TileColor" content="#020307")
+	meta(name="msapplication-TileImage" content="img/fav/mstile-144x144.png")
+	meta(name="msapplication-config" content="img/fav/browserconfig.xml")
+	
+	-->
+		<!--SEO-->
+		<title>Document</title>
+		<meta name="description" itemprop="description" content="" />
+		<link rel="stylesheet" href="css/vendor.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-edit.css" />
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;amp;subset=cyrillic" rel="stylesheet" />
+	</head>
+	<!-- mixin nameMixin()-->
+	<!-- - var args = Array.prototype.slice.call(arguments)-->
+	<!-- - for item in args-->
+
+	<body>
+		<div class="pattern-black">
+			<!--block header-->
+			<div class="head">
+				<!--header-slim-->
+				<div class="main-cont">
+					<div class="head-slim">
+						<div class="head-slim__list">
+							<a class="head-slim__list-el" href="#">Доставка и оплата</a>
+							<a class="head-slim__list-el" href="#">Акции</a>
+							<a class="head-slim__list-el" href="#">Отзывы</a>
+							<a class="head-slim__list-el" href="#">Новости</a>
+							<a class="head-slim__list-el" href="#">Вакансии</a>
+							<a class="head-slim__list-el" href="#">О компании</a>
+						</div>
+						<div class="head-slim__list-soc">
+							<a class="head-slim__list-soc-el" href="#">
+								<svg class="icon">
+									<use xlink:href="#soc-vk"></use>
+								</svg>
+							</a>
+							<a class="head-slim__list-soc-el head-slim__list-soc-el--inst" href="#">
+								<svg class="icon">
+									<use xlink:href="#soc-instagram"></use>
+								</svg>
+							</a>
+							<a class="head-slim__list-soc-el head-slim__list-soc-el--apple" href="#">
+								<svg class="icon">
+									<use xlink:href="#apple"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="header-nav">
+					<div class="main-cont">
+						<div class="header-nav__wrap">
+							<a class="header-nav__logo" href="/">
+								<svg class="icon">
+									<use xlink:href="#logo--md--color"></use>
+								</svg>
+							</a>
+							<div class="header-nav__menu">
+								<div class="header-nav__menu-icon">
+									<svg class="icon">
+										<use xlink:href="#menu"></use>
+									</svg>
+								</div>
+								<div class="header-nav__menu-text">Меню</div>
+							</div>
+							<div class="header-nav-info">
+								<div class="header-nav-info__phone">
+									<div class="header-nav-info__phone-number">
+										<span>8 (3452)</span>90-00-90</div>
+									<div class="header-nav-info__phone-text">Перезвоните мне</div>
+								</div>
+								<div class="header-nav-info__time">
+									<div class="header-nav-info__time-el">Вс – Чт
+										<span></span>с 09:00 до 00:00</div>
+									<div class="header-nav-info__time-el">Пт – Сб
+										<span></span>с 09:00 до 01:00</div>
+								</div>
+							</div>
+							<div class="header-nav__enter">
+								<div class="header-nav__enter-icon">
+									<svg class="icon">
+										<use xlink:href="#login"></use>
+									</svg>
+								</div>
+								<div class="header-nav__enter-text">Войти</div>
+							</div>
+							<div class="header-nav__cart">
+								<div class="header-nav__cart-icon">
+									<div class="header-nav__cart-val">
+										<span>10</span>
+									</div>
+									<svg class="icon">
+										<use xlink:href="#cart"></use>
+									</svg>
+								</div>
+								<div class="header-nav__cart-text">2500
+									<div class="rub">o</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--block header end-->
+			<div class="head-title">
+				<div class="head-title__sub">Новости и события</div>
+				<div class="head-title__text">Будьте вкурсе</div>
+			</div>
+			<!--bread-->
+			<div class="bread-row">
+				<div class="bread">
+					<a class="bread__el" href="#">Пункт 1</a>
+					<a class="bread__el" href="#">Пункт 2</a>
+					<a class="bread__el" href="#">Пункт 3</a>
+				</div>
+			</div>
+			<div class="main-cont">
+				<div class="news-list news-list--container">
+					<div class="news-el">
+						<a class="news-el__img" href="#" style="background-image:url('img/news.jpg');"></a>
+						<div class="news-el__wrapper">
+							<a class="news-el__title" href="#">С 8 Марта! дорогие женщины</a>
+							<div class="news-el__text">С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня</div>
+							<div class="news-el__date">05 Марта, 2017</div>
+						</div>
+					</div>
+					<div class="news-el">
+						<a class="news-el__img" href="#" style="background-image:url('img/news.jpg');"></a>
+						<div class="news-el__wrapper">
+							<a class="news-el__title" href="#">С 8 Марта! дорогие женщины</a>
+							<div class="news-el__text">С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня</div>
+							<div class="news-el__date">05 Марта, 2017</div>
+						</div>
+					</div>
+					<div class="news-el">
+						<a class="news-el__img" href="#" style="background-image:url('img/news.jpg');"></a>
+						<div class="news-el__wrapper">
+							<a class="news-el__title" href="#">С 8 Марта! дорогие женщины</a>
+							<div class="news-el__text">С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня</div>
+							<div class="news-el__date">05 Марта, 2017</div>
+						</div>
+					</div>
+					<div class="news-el">
+						<a class="news-el__img" href="#" style="background-image:url('img/news.jpg');"></a>
+						<div class="news-el__wrapper">
+							<a class="news-el__title" href="#">С 8 Марта! дорогие женщины</a>
+							<div class="news-el__text">С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня</div>
+							<div class="news-el__date">05 Марта, 2017</div>
+						</div>
+					</div>
+					<div class="news-el">
+						<a class="news-el__img" href="#" style="background-image:url('img/news.jpg');"></a>
+						<div class="news-el__wrapper">
+							<a class="news-el__title" href="#">С 8 Марта! дорогие женщины</a>
+							<div class="news-el__text">С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня</div>
+							<div class="news-el__date">05 Марта, 2017</div>
+						</div>
+					</div>
+					<div class="news-el">
+						<a class="news-el__img" href="#" style="background-image:url('img/news.jpg');"></a>
+						<div class="news-el__wrapper">
+							<a class="news-el__title" href="#">С 8 Марта! дорогие женщины</a>
+							<div class="news-el__text">С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня</div>
+							<div class="news-el__date">05 Марта, 2017</div>
+						</div>
+					</div>
+					<div class="news-el">
+						<a class="news-el__img" href="#" style="background-image:url('img/news.jpg');"></a>
+						<div class="news-el__wrapper">
+							<a class="news-el__title" href="#">С 8 Марта! дорогие женщины</a>
+							<div class="news-el__text">С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня</div>
+							<div class="news-el__date">05 Марта, 2017</div>
+						</div>
+					</div>
+					<div class="news-el">
+						<a class="news-el__img" href="#" style="background-image:url('img/news.jpg');"></a>
+						<div class="news-el__wrapper">
+							<a class="news-el__title" href="#">С 8 Марта! дорогие женщины</a>
+							<div class="news-el__text">С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня</div>
+							<div class="news-el__date">05 Марта, 2017</div>
+						</div>
+					</div>
+					<div class="news-el">
+						<a class="news-el__img" href="#" style="background-image:url('img/news.jpg');"></a>
+						<div class="news-el__wrapper">
+							<a class="news-el__title" href="#">С 8 Марта! дорогие женщины</a>
+							<div class="news-el__text">С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня</div>
+							<div class="news-el__date">05 Марта, 2017</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-slim">
+			<!--block footer-->
+			<div class="footer">
+				<div class="footer__dark">
+					<div class="main-cont">
+						<div class="footer__top">
+							<div class="scroll-top">
+								<svg class="icon">
+									<use xlink:href="#arrow-dirrect-up"></use>
+								</svg>
+							</div>
+							<div class="footer__list">
+								<a class="footer__list-el" href="#">Сеты</a>
+								<a class="footer__list-el" href="#">Роллы</a>
+								<a class="footer__list-el" href="#">Суши</a>
+								<a class="footer__list-el" href="#">Пицца</a>
+								<a class="footer__list-el" href="#">Пироги</a>
+								<a class="footer__list-el" href="#">Лапша WOK</a>
+								<a class="footer__list-el" href="#">Fast food</a>
+								<a class="footer__list-el" href="#">Бизнес-ланч</a>
+								<a class="footer__list-el" href="#">Комбо-меню</a>
+								<a class="footer__list-el" href="#">Супы</a>
+								<a class="footer__list-el" href="#">Паста</a>
+								<a class="footer__list-el" href="#">Гриль-меню</a>
+								<a class="footer__list-el" href="#">Салаты</a>
+								<a class="footer__list-el" href="#">Десерты</a>
+								<a class="footer__list-el" href="#">Напитки</a>
+								<a class="footer__list-el" href="#">Соусы</a>
+							</div>
+							<div class="footer-contact">
+								<div class="footer-contact__phone">
+									<a class="footer-contact__phone-el" href="tel:8 (3452) 68-10-89">8 (3452) 68-10-89</a>
+									<a class="footer-contact__phone-el" href="tel:8 (3452) 90-00-90">8 (3452) 90-00-90</a>
+								</div>
+								<div class="footer__time">
+									<div class="footer__time-el">Вс – Чт
+										<span></span>с 09:00 до 00:00</div>
+									<div class="footer__time-el">Пт – Сб
+										<span></span>с 09:00 до 01:00</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="main-cont">
+						<div class="footer__bottom-wrap">
+							<div class="footer__copy">
+								<div class="footer__copy-text">© 2012-2016
+									<br> Ресторан доставки
+									<span>Pro-Porcia</span>
+								</div>
+								<a class="footer__copy-link" href="#">Политика конфиденциальности</a>
+								<a class="footer__copy-link" href="#">Публичная оферта</a>
+							</div>
+							<div class="footer__bottom-menu">
+								<a class="footer__bottom-menu-el" href="#">Акции</a>
+								<a class="footer__bottom-menu-el" href="#">Отзывы</a>
+								<a class="footer__bottom-menu-el" href="#">Доставка и оплата</a>
+								<a class="footer__bottom-menu-el" href="#">Новости</a>
+								<a class="footer__bottom-menu-el" href="#">Вакансии</a>
+								<a class="footer__bottom-menu-el" href="#">О компании</a>
+							</div>
+							<div class="footer__pay">
+								<div class="footer__pay-row">
+									<div class="footer__pay-row__el">
+										<svg class="icon">
+											<use xlink:href="#master"></use>
+										</svg>
+									</div>
+									<div class="footer__pay-row__el footer__pay-row__el--visa">
+										<svg class="icon">
+											<use xlink:href="#visa"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="footer__pay-text">Вы можете оплатить покупки картой онлайн, либо выбрать другой способ оплаты.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--scroll to top-->
+			<!--block footer end-->
+		</div>
+		<script src="js/combined.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/script-edit.js"></script>
+	</body>
+
+</html>

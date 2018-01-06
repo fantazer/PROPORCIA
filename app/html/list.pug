@@ -1,0 +1,54 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.pattern-black
+	+header()
+	.head-title
+		.head-title__sub Меню
+		.head-title__text Роллы
+
+	//bread
+	.bread-row
+		.bread
+			a(href="#").bread__el Пункт 1
+			a(href="#").bread__el Пункт 2
+			a(href="#").bread__el Пункт 3
+
+//list item
+.section-content
+	.main-cont
+		.filter
+			.filter-list
+				-
+					var items = [
+					'Сеты',
+					'Роллы',
+					'Суши',
+					'Пицца',
+					'Пироги',
+					'Лапша WOK',
+					'Fast food',
+					'Бизнес-ланч',
+					'Комбо-меню',
+					'Супы',
+					'Паста',
+					'Гриль-меню',
+					'Салаты',
+					'Десерты',
+					'Напитки',
+					'Соусы'
+					];
+				each item in items
+					a(href="#").filter-list__el #{item}
+			.filter-get
+				.filter-get__el Все
+				.filter-get__el Акции
+				.filter-get__el Новинки
+		.item-wrap
+			- for (var i=0;i<8;i++)
+				+item()
+
+		.btn-row--mid
+			.list-get-more Хочу больше
++footer()
+include ./block_html/_script.pug

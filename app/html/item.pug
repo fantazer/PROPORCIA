@@ -3,7 +3,7 @@ include block_html/_include.pug
 
 .pattern-black
 	+header()
-	//banner
+	//bread
 	.bread-row
 		.bread
 			a(href="#").bread__el Пункт 1
@@ -23,7 +23,7 @@ include block_html/_include.pug
 						span.rub o
 					a(href="#").card-info__get-btn Хочу
 
-//
+//list item
 .section-content
 	.main-cont
 		.title--section Вам может понравиться
@@ -31,7 +31,5 @@ include block_html/_include.pug
 			- for (var i=0;i<8;i++)
 				+item()
 
-
 +footer()
-
 include ./block_html/_script.pug
