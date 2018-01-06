@@ -39,7 +39,7 @@ body
 
 .rub
 	display: inline
-
+	line-height: 1.3
 .nice-select
 	br(0)
 	margin-bottom: 20px
@@ -254,13 +254,17 @@ select.select-beauty
 	flex(between)
 	fw()
 	fl()
+
 .banner-state
+	flex(between)
+	fl()
+	tr(all)
 	border 1px solid rgba(255, 255, 255, 0.2)
 	height: 48%
 	position: relative
 	padding: 10%
-	flex(between)
-	fl()
+	&:hover
+		background: $green
 	.flag
 		position: absolute
 		top 0
@@ -279,11 +283,13 @@ select.select-beauty
 	color white
 
 
-//.footer
+.footer
+	margin-top: 55px
 .footer__dark
 	@extend .pattern-black
 //.main-cont
 .footer__top
+	position: relative
 	f()
 	justify-content: space-between
 	padding: 60px 0
@@ -394,20 +400,36 @@ select.select-beauty
 	grid-gap: 20px
 
 .item-el
+	f()
+	fl()
+	cp()
+	position: relative
+	background: white
+	&:hover
+		.item-el__title
+			background: black
+			color white
+.item-el__wrapper
+	f()
+	fl()
 	border 1px solid #d9d9d9
-
+	border-top: 0
+	flex-grow 1
 .item-el__img
 	bg-full()
 	padding: 35%
+	display: block
 
 .item-el__content
 	padding: 20px
-
+	flex-grow 1
 .item-el__title
+	display: inline
 	@extend .type--lg
 	margin-bottom: 10px
 
 .item-el__text
+	margin-top: 10px
 	line-height: 1.6
 
 .item-el__info
@@ -461,9 +483,6 @@ select.select-beauty
 	background:gray
 	grid-column: 3 / 5
 
-
-
-
 .item-el__incr
 	display: none
 	width: 100%
@@ -493,3 +512,218 @@ select.select-beauty
 	.item-el__incr
 		flex(mid)
 	background: $green
+
+.item-mod
+	f()
+	position: absolute
+	top 20px
+	right 20px
+	width: 100%
+	align-items:flex-end
+	justify-content: flex-end
+.item-mod-el
+	margin-left: 10px
+	size 35px
+	flex(mid)
+	.icon
+		fill white
+.item-mod-el--percent
+	background: $red
+	.icon
+		size 20px
+.item-mod-el--new
+	background: $green
+	.icon
+		width: 20px
+		height: 10px
+
+.section-sale
+	@extend .pattern-black
+	padding: 80px 0
+
+.section-sale__wrap
+	display grid
+	grid-template-columns: repeat(4, 1fr)
+	grid-gap: 10px
+
+.section-sale__info-title
+	color $red
+	font-family Liana
+	font-size 38px
+	margin-bottom: 40px
+
+.section-sale__info-text
+	@extend .type--xl
+	margin-bottom: 40px
+	color white
+	width: 80%
+
+.section-sale__info-get
+	@extend .btn--dark
+	@extend .btn--md-fix
+
+.news-list
+	display grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: 20px
+.news-el
+	f()
+	fl()
+	&:hover
+		.news-el__title
+			background: black
+			color white
+.news-el__img
+	bg-full()
+	padding: 35%
+	display: block
+
+.news-el__wrapper
+	border 1px solid #d9d9d9
+	border-top 0
+	padding: 20px
+	f()
+	fl()
+	flex-grow 1
+
+.news-el__title
+	@extend .type--lg
+	tr(all)
+
+.news-el__text
+	color #404040
+	line-height: 1.6
+	margin-top: 10px
+	margin-bottom: 20px
+
+.news-el__date
+	color #949494
+	up()
+	margin-top: auto
+
+//.section-slogan
+.slogan
+	center(600px,10px)
+
+.slogan-title-top
+	color $red
+	font-family Liana
+	font-size 48px
+	margin-bottom: 10px
+
+.slogan-title
+	@extend .type--xxl
+
+.slogan-img
+	bg-full()
+	background-size:contain
+	padding: 25%
+	margin-top: -7%
+	position: relative
+	margin-bottom: 20px
+
+.slogan-text
+	line-height: 1.6
+	margin-bottom: 30px
+//.slogan-info
+
+.slogan-info__text
+	margin-bottom: 20px
+
+.slogan-info__numb
+	@extend .type--lg
+	margin-bottom: 10px
+
+.slogan-info__link
+	@extend .link--mark
+
+.scroll-top
+	size 80px
+	flex(mid)
+	background: $green
+	position: absolute
+	right: 0
+	top 0
+	cp()
+	.icon
+		fill white
+		size 30px
+
+.bread
+	+below(768px)
+		margin-bottom: 20px
+	f()
+	margin-bottom: 40px
+
+.bread__el
+	margin-right: 40px
+	position: relative
+	tr(all)
+	color white
+	opacity .4
+	&:hover
+		opacity 1
+		color white
+	&:last-child
+		&:before
+			display: none
+	&:before
+		content '-'
+		position: absolute
+		color white
+		opacity .4
+		top 0
+		right -25px
+
+.bread-row
+	flex(mid)
+
+.card
+	f()
+	justify-content: space-between
+	margin-bottom: 100px
+
+.card-img
+	width: 50%
+	padding: 20%
+	bg-full()
+
+.card-info
+	width: 35%
+
+.card-info__title-top
+	color $red
+	font-family Liana
+	margin-bottom: 20px
+	font-size: 48px
+
+.card-info__title
+	@extend .type--xxl
+	color white
+	margin-bottom: 20px
+
+.card-info__text
+	color white
+	line-height: 1.6
+	margin-bottom: 60px
+
+.card-info__weight
+	text-align: center
+	color white
+	margin-bottom: 60px
+
+.card-info__get
+	flex(around)
+
+.card-info__get-val
+	f()
+	@extend .type--xl
+	color white
+
+.card-info__get-price
+	margin-right: 10px
+//.rub
+
+.card-info__get-btn
+	@extend .btn--sm-fix
+	@extend .btn--mark

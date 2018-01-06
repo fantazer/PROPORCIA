@@ -40,10 +40,7 @@
 		<!--SEO-->
 		<title>Document</title>
 		<meta name="description" itemprop="description" content="" />
-		<!--build:css css/vendor.css-->
-		<link rel="stylesheet" href="bower/normalize.css/normalize.css" />
-		<link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
-		<!--endbuild-->
+		<link rel="stylesheet" href="css/vendor.css">
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style-edit.css" />
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;amp;subset=cyrillic" rel="stylesheet" />
@@ -142,34 +139,28 @@
 			</div>
 			<!--block header end-->
 			<!--banner-->
+			<div class="bread-row">
+				<div class="bread">
+					<a class="bread__el" href="#">Пункт 1</a>
+					<a class="bread__el" href="#">Пункт 2</a>
+					<a class="bread__el" href="#">Пункт 3</a>
+				</div>
+			</div>
 			<div class="main-cont">
-				<div class="banner">
-					<div class="banner-img" style="background-image:url('img/main-banner.jpg');"></div>
-					<div class="banner-state__col">
-						<a class="banner-state" href="#">
-							<div class="flag">
-								<div class="flag-content">
-									<svg class="icon">
-										<use xlink:href="#box"></use>
-									</svg>
-								</div>
+				<div class="card">
+					<div class="card-img" style="background-image:url('img/card-img.jpg');"></div>
+					<div class="card-info">
+						<div class="card-info__title-top">Роллы</div>
+						<div class="card-info__title">Чикен Терияки</div>
+						<div class="card-info__text">Курица терияки, сливочный сыр, огурец, овощной микс, зеленый лук, соусы Спайси и Унаги, кунжут, нори, рис</div>
+						<div class="card-info__weight">180 г (180 Ккал /100 г)</div>
+						<div class="card-info__get">
+							<div class="card-info__get-val">
+								<div class="card-info__get-price">550</div>
+								<span class="rub">o</span>
 							</div>
-							<div class="banner-state__title">Бесплатная
-								<br> Доставка</div>
-							<div class="banner-state__text">При заказе от 500 руб. только по Тюмени</div>
-						</a>
-						<a class="banner-state" href="#">
-							<div class="flag">
-								<div class="flag-content">
-									<svg class="icon">
-										<use xlink:href="#bonus"></use>
-									</svg>
-								</div>
-							</div>
-							<div class="banner-state__title">Бесплатная
-								<br> Доставка</div>
-							<div class="banner-state__text">При заказе от 500 руб. только по Тюмени</div>
-						</a>
+							<a class="card-info__get-btn" href="#">Хочу</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -177,7 +168,7 @@
 		<!---->
 		<div class="section-content">
 			<div class="main-cont">
-				<div class="title--section">Популярное на этой неделе</div>
+				<div class="title--section">Вам может понравиться</div>
 				<div class="item-wrap">
 					<!--block item-->
 					<div class="item-el">
@@ -521,19 +512,6 @@
 						</div>
 					</div>
 					<!--block item end-->
-					<div class="item-el-slider">as</div>
-				</div>
-			</div>
-		</div>
-		<!--section-sale-->
-		<div class="section-sale">
-			<div class="main-cont">
-				<div class="section-sale__wrap">
-					<div class="section-sale__info">
-						<div class="section-sale__info-title">Акции</div>
-						<div class="section-sale__info-text">большие скидки этого месяца</div>
-						<a class="section-sale__info-get" href="#">Все акции</a>
-					</div>
 					<!--block item-->
 					<div class="item-el">
 						<div class="item-mod">
@@ -648,108 +626,6 @@
 						</div>
 					</div>
 					<!--block item end-->
-					<!--block item-->
-					<div class="item-el">
-						<div class="item-mod">
-							<div class="item-mod-el item-mod-el--percent">
-								<svg class="icon">
-									<use xlink:href="#percent"></use>
-								</svg>
-							</div>
-							<div class="item-mod-el item-mod-el--new">
-								<svg class="icon">
-									<use xlink:href="#New"></use>
-								</svg>
-							</div>
-						</div>
-						<a class="item-el__img" href="#" style="background-image:url('img/item-1.jpg');"></a>
-						<div class="item-el__wrapper">
-							<div class="item-el__content">
-								<a class="item-el__title" href="#">Суши с креветкой и ананасом</a>
-								<div class="item-el__text">Свежая булочка, котлета из говядины, сыр, соленый огурец, лук, соус сырный ...</div>
-							</div>
-							<div class="item-el__info">
-								<div class="item-el__info-price">350
-									<span class="rub">o</span>
-								</div>
-								<div class="item-el__info-get">
-									<div class="item-el__add">
-										<div class="item-el__info-get-text">Хочу</div>
-										<div class="item-el__info-get-plus">
-											<svg class="icon">
-												<use xlink:href="#plus"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="item-el__incr">
-										<div class="incr">
-											<div class="incr__minus incr__nav">
-												<svg class="icon">
-													<use xlink:href="#minus"></use>
-												</svg>
-											</div>
-											<div class="incr__val">
-												<span>1</span>
-												<div class="incr__val-coner"></div>
-											</div>
-											<div class="incr__plus incr__nav">
-												<svg class="icon">
-													<use xlink:href="#plus"></use>
-												</svg>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item-el__descr">150 г. (185 Ккал/100г)</div>
-						</div>
-					</div>
-					<!--block item end-->
-				</div>
-			</div>
-		</div>
-		<!--section-news-->
-		<div class="section-content">
-			<div class="main-cont">
-				<div class="title--section">Новости и события</div>
-				<div class="news-list">
-					<div class="news-el">
-						<a class="news-el__img" href="#" style="background-image:url('img/news.jpg');"></a>
-						<div class="news-el__wrapper">
-							<a class="news-el__title" href="#">С 8 Марта! дорогие женщины</a>
-							<div class="news-el__text">С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня</div>
-							<div class="news-el__date">05 Марта, 2017</div>
-						</div>
-					</div>
-					<div class="news-el">
-						<a class="news-el__img" href="#" style="background-image:url('img/news.jpg');"></a>
-						<div class="news-el__wrapper">
-							<a class="news-el__title" href="#">С 8 Марта! дорогие женщины</a>
-							<div class="news-el__text">С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня</div>
-							<div class="news-el__date">05 Марта, 2017</div>
-						</div>
-					</div>
-					<div class="news-el">
-						<a class="news-el__img" href="#" style="background-image:url('img/news.jpg');"></a>
-						<div class="news-el__wrapper">
-							<a class="news-el__title" href="#">С 8 Марта! дорогие женщины</a>
-							<div class="news-el__text">С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня</div>
-							<div class="news-el__date">05 Марта, 2017</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="section-slogan">
-			<div class="slogan">
-				<div class="slogan-title-top">Proporcia</div>
-				<div class="slogan-title">Мы спасаем от голода всю Тюмень уже 5 лет!</div>
-				<div class="slogan-img" style="background-image:url('img/boorder.png');"></div>
-				<div class="slogan-text">Ресторан доставки «Pro-Porcia» радует Тюмень вкусной едой уже 5 лет. В нашем ассортименте есть роллы, сеты, пицца, ВОКи, паста, бургеры, десерты и многое другое! Приоритетами в своей работе мы считаем безупречное качество еды и высокий уровень сервиса.</div>
-				<div class="slogan-info">
-					<div class="slogan-info__text">Cлужба контроля качества «Pro-Porcia»:</div>
-					<div class="slogan-info__numb">+7 (3452) 68-10-89</div>
-					<a class="slogan-info__link" href="#">pro.porcia@mail.ru.</a>
 				</div>
 			</div>
 		</div>
@@ -836,13 +712,7 @@
 		</div>
 		<!--scroll to top-->
 		<!--block footer end-->
-		<!--build:js js/combined.js-->
-		<script src="bower/jquery/dist/jquery.js"></script>
-		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
-		<script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
-		<!--script(src='bower/owl.carousel/dist/owl.carousel.min.js')-->
-		<!--script(src="js/jquery.smoothscroll.js")-->
-		<!-- endbuild-->
+		<script src="js/combined.js"></script>
 		<script src="js/script.js"></script>
 		<script src="js/script-edit.js"></script>
 	</body>

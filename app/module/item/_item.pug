@@ -1,0 +1,33 @@
+mixin item()
+	//block item
+	.item-el
+		.item-mod
+			.item-mod-el.item-mod-el--percent
+				+icon("percent","icon")
+			.item-mod-el.item-mod-el--new
+				+icon("New","icon")
+		a(href="#" style="background-image:url('img/item-1.jpg')").item-el__img
+		.item-el__wrapper
+			.item-el__content
+				a(href="#").item-el__title Суши с креветкой и ананасом
+				.item-el__text Свежая булочка, котлета из говядины, сыр, соленый огурец, лук, соус сырный ...
+			.item-el__info
+				.item-el__info-price 350
+					span.rub o
+				.item-el__info-get
+					.item-el__add
+						.item-el__info-get-text Хочу
+						.item-el__info-get-plus
+							+icon("plus","icon")
+					.item-el__incr
+						.incr
+							.incr__minus.incr__nav
+								+icon("minus","icon")
+							.incr__val
+								span 1
+								.incr__val-coner
+							.incr__plus.incr__nav
+								+icon("plus","icon")
+			.item-el__descr 150 г. (185 Ккал/100г)
+
+	//block item end

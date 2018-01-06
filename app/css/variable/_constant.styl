@@ -135,8 +135,6 @@ p
 		background: white
 		color black
 
-
-
 .link--text
 	color $blue
 	text-decoration underline
@@ -165,10 +163,12 @@ btnStyleLight(br-btn,color-btn)
 	up()
 	br(0px)
 	tr(all)
+	up()
 	display inline-block
 	background none
 	border 1px solid transparent
 	text-align: center
+	font-family Bebas
 	&:hover
 		cursor pointer
 
@@ -179,10 +179,20 @@ btnStyleLight(br-btn,color-btn)
 	.nav-icon
 		size 10px
 
+.btn--sm-fix
+	width: 150px
+	padding: 10px
+	@extend .type--md
+
 .btn--md
 	@extend .btn
 	@extend .type--md
 	padding 20px 45px
+
+.btn--md-fix
+	@extend .type--md
+	padding: 15px
+	width: 200px
 
 .btn--lg
 	@extend .btn
@@ -232,10 +242,15 @@ btnStyleLight(br-btn,color-btn)
 	.nav-icon
 		fill black
 
-.btn--grey
+.btn--dark
 	@extend .btn
-	border 1px solid #dddddd
-	background-color #ffffff
+	border 1px solid white
+	color #ffffff
+	background: none
+	&:hover
+		border 1px solid darken(white,40)
+		color darken(white,40)
+
 
 .btn--dotted
 	@extend .btn
@@ -300,7 +315,6 @@ btnStyleLight(br-btn,color-btn)
 	transform: scale(2)
 .btn--hover:active:before
 	transform: scale(2)
-
 
 button
 	font-family $v-font

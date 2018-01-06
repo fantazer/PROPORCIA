@@ -1,0 +1,37 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.pattern-black
+	+header()
+	//banner
+	.bread-row
+		.bread
+			a(href="#").bread__el Пункт 1
+			a(href="#").bread__el Пункт 2
+			a(href="#").bread__el Пункт 3
+	.main-cont
+		.card
+			.card-img(style="background-image:url('img/card-img.jpg')")
+			.card-info
+				.card-info__title-top Роллы
+				.card-info__title Чикен Терияки
+				.card-info__text Курица терияки, сливочный сыр, огурец, овощной микс, зеленый лук, соусы Спайси и Унаги, кунжут, нори, рис
+				.card-info__weight 180 г (180 Ккал /100 г)
+				.card-info__get
+					.card-info__get-val
+						.card-info__get-price 550
+						span.rub o
+					a(href="#").card-info__get-btn Хочу
+
+//
+.section-content
+	.main-cont
+		.title--section Вам может понравиться
+		.item-wrap
+			- for (var i=0;i<8;i++)
+				+item()
+
+
++footer()
+
+include ./block_html/_script.pug

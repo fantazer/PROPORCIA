@@ -4,6 +4,8 @@ mixin footer()
 		.footer__dark
 			.main-cont
 				.footer__top
+					.scroll-top
+						+icon("arrow-dirrect-up","icon")
 					.footer__list
 						-
 							var items = [
@@ -64,4 +66,7 @@ mixin footer()
 							.footer__pay-row__el.footer__pay-row__el--visa
 								+icon("visa","icon")
 						.footer__pay-text Вы можете оплатить покупки картой онлайн, либо выбрать другой способ оплаты.
+	
+	//scroll to top
+
 	//block footer end

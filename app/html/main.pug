@@ -8,47 +8,69 @@ include block_html/_include.pug
 		.banner
 			.banner-img(style="background-image:url('img/main-banner.jpg')")
 			.banner-state__col
-				.banner-state
+				a(href="#").banner-state
 					.flag
 						.flag-content
 							+icon("box","icon")
 					.banner-state__title Бесплатная <br> Доставка
 					.banner-state__text При заказе от 500 руб. только по Тюмени
-				.banner-state
+				a(href="#").banner-state
 					.flag
 						.flag-content
 							+icon("bonus","icon")
 					.banner-state__title Бесплатная <br> Доставка
 					.banner-state__text При заказе от 500 руб. только по Тюмени
 
+//
 .section-content
 	.main-cont
 		.title--section Популярное на этой неделе
 		.item-wrap
 			- for (var i=0;i<6;i++)
-				.item-el
-					.item-el__img(style="background-image:url('img/item-1.jpg')")
-					.item-el__content
-						.item-el__title Суши с креветкой и ананасом
-						.item-el__text Свежая булочка, котлета из говядины, сыр, соленый огурец, лук, соус сырный ...
-					.item-el__info
-						.item-el__info-price 350
-							span.rub o
-						.item-el__info-get
-							.item-el__add
-								.item-el__info-get-text Хочу
-								.item-el__info-get-plus
-									+icon("plus","icon")
-							.item-el__incr
-								.incr
-									.incr__minus.incr__nav
-										+icon("minus","icon")
-									.incr__val
-										span 1
-										.incr__val-coner
-									.incr__plus.incr__nav
-										+icon("plus","icon")
-					.item-el__descr 150 г. (185 Ккал/100г)
+				+item()
 			.item-el-slider as
+
+//section-sale
+.section-sale
+	.main-cont
+		.section-sale__wrap
+			.section-sale__info
+				.section-sale__info-title Акции
+				.section-sale__info-text большие скидки этого месяца
+				a(href="#").section-sale__info-get Все акции
+			- for (var i=0;i<3;i++)
+				+item()
+
+//section-news
+.section-content
+	.main-cont
+		.title--section Новости и события
+		.news-list
+			- for (var i=0;i<2;i++)
+				.news-el
+					a(href="#" style="background-image:url('img/news.jpg')").news-el__img
+					.news-el__wrapper
+						a(href="#").news-el__title С 8 Марта! дорогие женщины
+						.news-el__text С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня
+						.news-el__date 05 Марта, 2017
+			.news-el
+				a(href="#" style="background-image:url('img/news.jpg')").news-el__img
+				.news-el__wrapper
+					a(href="#").news-el__title С 8 Марта! дорогие женщины
+					.news-el__text С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня
+					.news-el__date 05 Марта, 2017
+
+.section-slogan
+	.slogan
+		.slogan-title-top Proporcia
+		.slogan-title Мы спасаем от голода всю Тюмень уже 5 лет!
+		.slogan-img(style="background-image:url('img/boorder.png')")
+		.slogan-text Ресторан доставки «Pro-Porcia» радует Тюмень вкусной едой уже 5 лет. В нашем ассортименте есть роллы, сеты, пицца, ВОКи, паста, бургеры, десерты и многое другое! Приоритетами в своей работе мы считаем безупречное качество еды и высокий уровень сервиса.
+		.slogan-info
+			.slogan-info__text Cлужба контроля качества «Pro-Porcia»:
+			.slogan-info__numb +7 (3452) 68-10-89
+			a(href="#").slogan-info__link pro.porcia@mail.ru.
+
 +footer()
+
 include ./block_html/_script.pug

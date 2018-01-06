@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+
+	//scroll smooth to top
+		$('.scroll-top').click(function() {
+			$('html, body').animate({scrollTop: 0},1400);
+			return false;
+		});
+	//scroll smooth to top===end
 	//increment field
 		$('.incr__minus').click(function () {
 			var $input = $(this).parent().find('.incr__val span');

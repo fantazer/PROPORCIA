@@ -1,9 +1,15 @@
 {
 	"block":{
 		"header":"header",
-		"footer":"footer"
+		"footer":"footer",
+		"item":"item"
 	},
 	"page":{
-		"index":"index"
+		"index":"index",
+		"item":"item",
+		"discount":"discount",
+		"list":"list",
+		"news":"news",
+		"news-full":"news-full"
 	}
 }
