@@ -11,6 +11,9 @@ mixin item()
 			.item-el__content
 				a(href="#").item-el__title Суши с креветкой и ананасом
 				.item-el__text Свежая булочка, котлета из говядины, сыр, соленый огурец, лук, соус сырный ...
+				.item-el__price--mobile 350
+					span.rub o
+
 			.item-el__info
 				.item-el__info-price 350
 					span.rub o
@@ -29,5 +32,9 @@ mixin item()
 							.incr__plus.incr__nav
 								+icon("plus","icon")
 			.item-el__descr 150 г. (185 Ккал/100г)
-
+		.item-el__get
+			.item-el__get-el
+				+icon("plus","icon")
+			.item-el__get-el
+				+icon("minus","icon")
 	//block item end

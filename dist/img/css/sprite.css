@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 61.6777em 943.4em;
+    background-size: 61.6777em 951.9em;
 }
 
 .no-svg .icon:before {
@@ -260,8 +260,17 @@
 
 
 
-  .icon.menu:before {
+  .icon.master--light:before {
       background-position: 0em -505.9em;
+      width: 5.8em;
+      height: 4.3em;
+  }
+
+
+
+
+  .icon.menu:before {
+      background-position: 0em -510.2em;
       width: 5em;
       height: 3.9em;
   }
@@ -270,7 +279,7 @@
 
 
   .icon.minus:before {
-      background-position: 0em -509.8em;
+      background-position: 0em -514.1em;
       width: 1.6em;
       height: 0.2em;
   }
@@ -279,7 +288,7 @@
 
 
   .icon.percent:before {
-      background-position: 0em -510em;
+      background-position: 0em -514.3em;
       width: 1.797em;
       height: 1.9969000000000001em;
   }
@@ -288,7 +297,7 @@
 
 
   .icon.phone-call:before {
-      background-position: 0em -512em;
+      background-position: 0em -516.3em;
       width: 47.3806em;
       height: 47.3806em;
   }
@@ -297,7 +306,7 @@
 
 
   .icon.placeholder:before {
-      background-position: 0em -559.4em;
+      background-position: 0em -563.7em;
       width: 47.7em;
       height: 47.7em;
   }
@@ -306,7 +315,7 @@
 
 
   .icon.plus:before {
-      background-position: 0em -607.1em;
+      background-position: 0em -611.4em;
       width: 1.6em;
       height: 1.6em;
   }
@@ -315,7 +324,7 @@
 
 
   .icon.profile:before {
-      background-position: 0em -608.7em;
+      background-position: 0em -613em;
       width: 3.1em;
       height: 4em;
   }
@@ -324,7 +333,7 @@
 
 
   .icon.share:before {
-      background-position: 0em -612.7em;
+      background-position: 0em -617em;
       width: 48.160000000000004em;
       height: 48.160000000000004em;
   }
@@ -333,7 +342,7 @@
 
 
   .icon.soc-facebook:before {
-      background-position: 0em -660.9em;
+      background-position: 0em -665.2em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -342,7 +351,7 @@
 
 
   .icon.soc-google:before {
-      background-position: 0em -712.1em;
+      background-position: 0em -716.4em;
       width: 9.6669em;
       height: 9.6669em;
   }
@@ -351,7 +360,7 @@
 
 
   .icon.soc-in:before {
-      background-position: 0em -721.8em;
+      background-position: 0em -726.1em;
       width: 43.011700000000005em;
       height: 43.011700000000005em;
   }
@@ -360,7 +369,7 @@
 
 
   .icon.soc-inst:before {
-      background-position: 0em -764.9em;
+      background-position: 0em -769.2em;
       width: 2em;
       height: 2em;
   }
@@ -369,7 +378,7 @@
 
 
   .icon.soc-instagram:before {
-      background-position: 0em -766.9em;
+      background-position: 0em -771.2em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -378,7 +387,7 @@
 
 
   .icon.soc-ok:before {
-      background-position: 0em -818.1em;
+      background-position: 0em -822.4em;
       width: 9.5481em;
       height: 9.5481em;
   }
@@ -387,7 +396,7 @@
 
 
   .icon.soc-twitter:before {
-      background-position: 0em -827.7em;
+      background-position: 0em -832em;
       width: 41.015499999999996em;
       height: 41.015499999999996em;
   }
@@ -396,7 +405,7 @@
 
 
   .icon.soc-vk:before {
-      background-position: 0em -868.8em;
+      background-position: 0em -873.1em;
       width: 2.597em;
       height: 1.5em;
   }
@@ -405,7 +414,7 @@
 
 
   .icon.soc-youtube:before {
-      background-position: 0em -870.3em;
+      background-position: 0em -874.6em;
       width: 6.4em;
       height: 6.4em;
   }
@@ -414,7 +423,7 @@
 
 
   .icon.star:before {
-      background-position: 0em -876.7em;
+      background-position: 0em -881em;
       width: 49.0727em;
       height: 49.0727em;
   }
@@ -423,7 +432,7 @@
 
 
   .icon.visa:before {
-      background-position: 0em -925.8em;
+      background-position: 0em -930.1em;
       width: 6.5em;
       height: 4em;
   }
@@ -431,8 +440,17 @@
 
 
 
+  .icon.visa--light:before {
+      background-position: 0em -934.1em;
+      width: 6.9em;
+      height: 4.2em;
+  }
+
+
+
+
   .icon.wave:before {
-      background-position: 0em -929.8em;
+      background-position: 0em -938.3em;
       width: 24.3945em;
       height: 13.5339em;
   }

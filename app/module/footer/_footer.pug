@@ -1,8 +1,9 @@
 mixin footer()
 	//block footer
 	.footer
+		//footer dark
 		.footer__dark
-			.main-cont
+			.main-cont.main-cont--mobile
 				.footer__top
 					.scroll-top
 						+icon("arrow-dirrect-up","icon")
@@ -39,8 +40,18 @@ mixin footer()
 							.footer__time-el Пт – Сб
 								span
 								| с 09:00 до 01:00
+					.footer__pay.footer__pay--dark
+						.footer__pay-row
+							.footer__pay-row__el
+								+icon("master--light","icon")
+							.footer__pay-row__el.footer__pay-row__el--visa
+								+icon("visa--light","icon")
+						.footer__pay-text Вы можете оплатить покупки картой онлайн, либо выбрать другой способ оплаты.
+		//footer dark===end
+
+		//footer bottom
 		.footer__bottom
-			.main-cont
+			.main-cont.main-cont--mobile
 				.footer__bottom-wrap
 					.footer__copy
 						.footer__copy-text © 2012-2016 <br> Ресторан доставки
@@ -66,10 +77,11 @@ mixin footer()
 							.footer__pay-row__el.footer__pay-row__el--visa
 								+icon("visa","icon")
 						.footer__pay-text Вы можете оплатить покупки картой онлайн, либо выбрать другой способ оплаты.
+		//footer bottom===end
+
 	//slide mobile menu
 	.nav#mobile-menu
 		ul.mobile-menu__one-lvl
-
 			li.mobile-menu-el
 				a(href="#") Меню ресторана
 				ul.mobile-menu__two-lvl
@@ -115,6 +127,16 @@ mixin footer()
 						span.modal-get(data-modal="enter") Вход
 					li.mobile-menu-el
 						span.modal-get(data-modal="registration") Регистрация
+			.mobile-menu__info
+
+				span.mobile-menu__numb 8 (3452) 90-00-90
+				span.mobile-menu__time
+					span.mobile-menu__time-el Вс – Чт
+						span
+						| с 09:00 до 00:00
+					span.mobile-menu__time-el Пт – Сб
+						span
+						| с 09:00 до 01:00
 
 	//slide mobile menu===end
 

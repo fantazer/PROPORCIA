@@ -37,6 +37,10 @@ body
 .main-cont
 	center(1200px,10px)
 
+.main-cont.main-cont--mobile
+	+below(768px)
+		center(600px,10px)
+
 .rub
 	display: inline
 	line-height: 1.3
@@ -46,6 +50,7 @@ body
 	background-size: 200%
 	background-position: 0 0
 	transition: .5s ease-in-out
+	display: inline
 	&:hover
 		background-position: -99.999% 0;
 		color white
@@ -144,7 +149,6 @@ select.select-beauty
 	f()
 	height: 140px
 	background: white
-	margin-bottom: 50px
 	position: relative
 
 .header-nav__logo
@@ -322,30 +326,51 @@ select.select-beauty
 	background-size: 200px
 
 .banner
+	+below(768px)
+		fw()
+	+below(640px)
+		margin: 20px 0
 	f()
 	justify-content: space-between
 	margin-bottom: 85px
+	margin-top: 50px
 
 .banner-img
-	padding: 20% 38%
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
+	padding: 3vw 5vw
 	background: black
 	background-repeat: no-repeat
 	background-size: cover
+	width: 75%
 
 .banner-state__col
+	+below(768px)
+		width: 100%
+		flex-flow row
+	+below(640px)
+		flex-flow column
 	width: 22%
 	flex(between)
 	fw()
 	fl()
 
 .banner-state
+	+below(768px)
+		height: auto
+		padding: 5%
+		width: 48%
+	+below(640px)
+		margin-bottom: 20px
+		width: 100%
 	flex(between)
 	fl()
 	tr(all)
 	border 1px solid rgba(255, 255, 255, 0.2)
 	height: 48%
 	position: relative
-	padding: 10%
+	padding: 2vw
 	&:hover
 		background: $green
 	.flag
@@ -356,6 +381,8 @@ select.select-beauty
 .banner-state__title
 	+below(1024px)
 		font-size: 20px
+	+below(768px)
+		margin-bottom: 20px
 	@extend .type--lg
 	color white
 	width: 100%
@@ -363,6 +390,8 @@ select.select-beauty
 .banner-state__text
 	+below(1024px)
 		font-size: 12px
+	+below(768px)
+		width: 100%
 	color white
 
 
@@ -376,12 +405,19 @@ select.select-beauty
 	@extend .pattern-black
 //.main-cont
 .footer__top
-	position: relative
+	+below(768px)
+		justify-content: flex-start
+		padding: 30px 0
+	+below(640px)
+		fl()
 	f()
+	position: relative
 	justify-content: space-between
 	padding: 60px 0
 
 .footer__list
+	+below(768px)
+		display: none
 	width: 65%
 	display: grid
 	grid-template-rows: repeat(4, auto)
@@ -395,6 +431,12 @@ select.select-beauty
 		color white
 
 .footer-contact
+	+below(768px)
+		width: 45%
+	+below(640px)
+		width: 100%
+		max-width 280px
+		margin-bottom: 20px
 	width: 30%
 
 .footer-contact__phone
@@ -420,6 +462,8 @@ select.select-beauty
 		margin: 0 5px
 
 .footer__bottom
+	+below(640px)
+		padding: 30px 0
 	padding: 60px 0
 
 .footer__bottom-wrap
@@ -427,6 +471,9 @@ select.select-beauty
 	justify-content: space-between
 
 .footer__copy
+	+below(768px)
+		width: 100%
+		text-align: center
 	width: 28%
 
 .footer__copy-text
@@ -436,10 +483,14 @@ select.select-beauty
 		color $green
 
 .footer__copy-link
+	+below(640px)
+		display: block
 	margin-bottom: 10px
 	display: inline-block
 
 .footer__bottom-menu
+	+below(768px)
+		display: none
 	width: 34%
 	display: grid
 	grid-template-rows: repeat(3, 40px)
@@ -448,6 +499,8 @@ select.select-beauty
 
 //.footer__bottom-menu-el
 .footer__pay
+	+below(768px)
+		display: none
 	width: 30%
 
 .footer__pay-row
@@ -466,10 +519,20 @@ select.select-beauty
 	line-height: 1.6
 
 .section-content
+	+below(768px)
+		padding: 30px 0
 	padding: 60px 0
+
+.section-content--news
+	+below(640px)
+		.main-cont
+			center(300px,10px)
 //.main-cont
 
 .title--section
+	+below(768px)
+		margin-bottom: 30px
+		line-height: 1
 	text-align: center
 	text-transform: uppercase
 	@extend .type--xl
@@ -487,6 +550,8 @@ select.select-beauty
 	grid-gap: 20px
 
 .item-el
+	+below(640px)
+		flex-flow row
 	f()
 	fl()
 	cp()
@@ -497,20 +562,33 @@ select.select-beauty
 			background-position: -99.999% 0
 			color white
 .item-el__wrapper
+	+below(640px)
+		width: 70%
 	f()
 	fl()
 	border 1px solid #d9d9d9
 	border-top: 0
 	flex-grow 1
 .item-el__img
+	+below(1280px)
+		padding: 8vw
+	+below(768px)
+		padding: 15vw
 	bg-full()
-	padding: 35%
+	padding: 6vw
 	display: block
 
 .item-el__content
+	+below(640px)
+		f()
+		fl()
+		align-items: flex-start
+		border-top 1px solid #d9d9d9
 	padding: 20px
 	flex-grow 1
 .item-el__title
+	+below(640px)
+		font-size: 5vw
 	@extend .type--lg
 	display: inline
 	margin-bottom: 10px
@@ -521,11 +599,16 @@ select.select-beauty
 	&:hover
 		background-position: -99.999% 0
 		color white
+
 .item-el__text
+	+below(640px)
+		display: none
 	margin-top: 10px
 	line-height: 1.6
 
 .item-el__info
+	+below(640px)
+		display: none
 	f()
 	border-top 1px solid #d9d9d9
 	border-bottom 1px solid #d9d9d9
@@ -536,6 +619,15 @@ select.select-beauty
 	@extend .type--md
 	padding: 15px 0
 	border-right 1px solid #d9d9d9
+
+.item-el__price--mobile
+	display: none
+	+below(640px)
+		@extend .type--md
+		font-size: 4vw
+		margin-top: auto
+		display: block
+		color $green
 
 .item-el__info-get
 	@extend .type--md
@@ -562,6 +654,8 @@ select.select-beauty
 	fill $green
 
 .item-el__descr
+	+below(640px)
+		display: none
 	padding: 15px 0
 	text-align: center
 	color #919191
@@ -607,6 +701,11 @@ select.select-beauty
 	background: $green
 
 .item-mod
+	+below(640px)
+		justify-content: flex-start
+		right:initial
+		top 6px
+		left: -3px
 	f()
 	position: absolute
 	top 20px
@@ -615,6 +714,8 @@ select.select-beauty
 	align-items:flex-end
 	justify-content: flex-end
 .item-mod-el
+	+below(640px)
+		size 25px
 	margin-left: 10px
 	size 35px
 	flex(mid)
@@ -623,52 +724,89 @@ select.select-beauty
 .item-mod-el--percent
 	background: $red
 	.icon
+		+below(640px)
+			size 15px
 		size 20px
 .item-mod-el--new
 	background: $green
 	.icon
+		+below(640px)
+			size 15px
 		width: 20px
 		height: 10px
 
 .section-sale
+	+below(1024px)
+		.main-cont
+			center(768px,10px)
+	+below(768px)
+		padding: 30px 0
+		.main-cont
+			center(600px,10px)
 	@extend .pattern-black
 	padding: 80px 0
-
 .section-sale__wrap
+	+below(1024px)
+		grid-template-columns: repeat(2, 1fr)
+		.item-el
+			&:nth-child(3)
+				display: none
+	+below(640px)
+		grid-template-columns: repeat(1, 1fr)
 	display grid
 	grid-template-columns: repeat(4, 1fr)
 	grid-gap: 10px
 
+.section-sale__info
+	+below(1024px)
+		grid-column: 1 / 4
+	+below(640px)
+		grid-column: 1 / 2
 .section-sale__info-title
+	+below(768px)
+		margin-bottom: 20px
 	color $red
 	font-family Liana
 	font-size 38px
 	margin-bottom: 40px
 
 .section-sale__info-text
+	+below(768px)
+		margin-bottom: 20px
 	@extend .type--xl
 	margin-bottom: 40px
 	color white
 	width: 80%
 
 .section-sale__info-get
+	+below(768px)
+		display: none
 	@extend .btn--dark
 	@extend .btn--md-fix
 
 .news-list
+	+below(768px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(640px)
+		grid-template-columns: repeat(1, 1fr)
 	display grid
 	grid-template-columns: repeat(3, 1fr)
 	grid-gap: 20px
 .news-el
+	+below(768px)
+		&:last-child
+			display: none
 	f()
 	fl()
 	&:hover
 		.news-el__title
-			background: black
+			background-position: -99.999% 0
 			color white
 .news-el__img
+	+below(640px)
+		padding: 25vw 10vw
 	bg-full()
-	padding: 35%
+	padding: 10vw 6vw
 	display: block
 
 .news-el__wrapper
@@ -677,13 +815,15 @@ select.select-beauty
 	padding: 20px
 	f()
 	fl()
+	align-items: flex-start
 	flex-grow 1
 	background: white
 
 .news-el__title
 	@extend .type--lg
 	tr(all)
-
+	display: inline
+	@extend .marked
 .news-el__text
 	color #404040
 	line-height: 1.6
@@ -700,12 +840,19 @@ select.select-beauty
 	center(600px,10px)
 
 .slogan-title-top
+	+below(768px)
+		text-align: center
+		font-size: 32px
 	color $red
 	font-family Liana
 	font-size 48px
 	margin-bottom: 10px
 
 .slogan-title
+	+below(768px)
+		text-align: center
+	+below(640px)
+		font-size: 38px
 	@extend .type--xxl
 
 .slogan-img
@@ -825,6 +972,8 @@ select.select-beauty
 	@extend .btn--sm-fix
 	@extend .btn--mark
 
+.head-title
+	padding-top: 50px
 .head-title__sub
 	text-align: center
 	color $red
@@ -1005,7 +1154,6 @@ select.select-beauty
 #mobile-menu
 	+above(769px)
 		display none!important
-	margin-top 50px
 	background white
 	border-top 1px solid #e6e6e6
 
@@ -1081,7 +1229,15 @@ html.mm-opened
 .header-nav__menu--desct
 	+below(768px)
 		display: none
-
+	&:hover
+		.header-nav__drop
+			display: block
+			height: auto
+			width: 100%
+			padding: 5%
+			clip initial
+			margin:0
+			opacity: 1
 //mobile menu===end
 
 .header-nav__drop
@@ -1089,10 +1245,18 @@ html.mm-opened
 	background: white
 	top 100%
 	left 0px
-	width: 100%
 	z-index 10
 	border 1px solid #e5e5e5
 	padding: 5%
+	height: 1px
+	margin: -1px
+	width: 1px
+	padding: 0
+	clip rect(0 0 0 0)
+	transition opacity .5s
+	opacity: 0
+.header-nav__drop-wrap
+	flex(between)
 
 .header-nav__drop-list
 	width: 65%
@@ -1106,3 +1270,82 @@ html.mm-opened
 	a
 		@extend .marked
 
+.header-nav__drop-img
+	width: 30%
+.header-nav__drop-img-el
+	bg-full()
+	background-size: contain
+	padding: 30%
+	display: block
+
+.mobile-menu__info
+	+above(640px)
+		display: none
+	padding: 30px
+	background: $green
+
+.mobile-menu__numb
+	text-align: center
+	color white
+	display: block
+	font-family Bebas
+	font-size 35px
+	margin-bottom: 20px
+
+.mobile-menu__time
+	flex(mid)
+	fl()
+	color white
+.mobile-menu__time-el
+	font-size: 15px
+	&:first-child
+		margin-bottom: 15px
+	span
+		display: inline-block
+		width: 45px
+		height: 1px
+		border-bottom 1px solid #e5e5e5
+		margin: 0 5px
+
+.section-sale-get--mobile
+	display: none
+	+below(768px)
+		flex(mid)
+		margin-top: 30px
+	a
+		@extend .btn--dark
+		@extend .btn--md-fix
+
+.footer__pay--dark
+	display: none
+	+below(768px)
+		display: block
+		color white
+		.icon
+			fill black
+	+below(640px)
+		width: 100%
+		max-width 280px
+
+.item-el__get
+	+below(640px)
+		f()
+		fl()
+		width: 15%
+	border 1px solid #d9d9d9
+	margin-left: -1px
+	display: none
+	.icon
+		size 16px
+.item-el__get-el
+	&:first-child
+		border-bottom 1px solid #d9d9d9
+		tr(all)
+		&:hover
+			background: $green
+			.icon
+				fill white
+		.icon
+			fill $green
+	height: 100%
+	flex(mid)

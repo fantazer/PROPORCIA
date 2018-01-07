@@ -4,7 +4,7 @@ include block_html/_include.pug
 .pattern-black
 	+header()
 	//banner
-	.main-cont
+	.main-cont.main-cont--mobile
 		.banner
 			.banner-img(style="background-image:url('img/main-banner.jpg')")
 			.banner-state__col
@@ -23,7 +23,7 @@ include block_html/_include.pug
 
 //
 .section-content
-	.main-cont
+	.main-cont.main-cont--mobile
 		.title--section Популярное на этой неделе
 		.item-wrap
 			- for (var i=0;i<6;i++)
@@ -32,7 +32,7 @@ include block_html/_include.pug
 
 //section-sale
 .section-sale
-	.main-cont
+	.main-cont.main-cont--mobile
 		.section-sale__wrap
 			.section-sale__info
 				.section-sale__info-title Акции
@@ -40,10 +40,12 @@ include block_html/_include.pug
 				a(href="#").section-sale__info-get Все акции
 			- for (var i=0;i<3;i++)
 				+item()
+		.section-sale-get--mobile
+			a(href="#") Все акции
 
 //section-news
-.section-content
-	.main-cont
+.section-content.section-content--news
+	.main-cont.main-cont--mobile
 		.title--section Новости и события
 		.news-list
 			- for (var i=0;i<2;i++)
