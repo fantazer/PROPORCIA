@@ -66,7 +66,56 @@ mixin footer()
 							.footer__pay-row__el.footer__pay-row__el--visa
 								+icon("visa","icon")
 						.footer__pay-text Вы можете оплатить покупки картой онлайн, либо выбрать другой способ оплаты.
-	
-	//scroll to top
+	//slide mobile menu
+	.nav#mobile-menu
+		ul.mobile-menu__one-lvl
+
+			li.mobile-menu-el
+				a(href="#") Меню ресторана
+				ul.mobile-menu__two-lvl
+					-
+						var subitems = [
+						'Сеты',
+						'Роллы',
+						'Суши',
+						'Пицца',
+						'Пироги',
+						'Лапша WOK',
+						'Fast food',
+						'Бизнес-ланч',
+						'Комбо-меню',
+						'Супы',
+						'Паста',
+						'Гриль-меню',
+						'Салаты',
+						'Десерты',
+						'Напитки',
+						'Соусы'
+						];
+					each subitem in subitems
+						li.mobile-menu-el
+							a(href="#") #{subitem}
+				-
+					var items = [
+						'Меню ресторана',
+						'Доставка и оплата',
+						'Акции',
+						'Отзывы',
+						'Новости',
+						'Вакансии',
+						'О компании'
+					];
+				each item in items
+					li.mobile-menu-el
+						a(href="#") #{item}
+			li.mobile-menu-el.mobile-menu-el--sub
+				span Личный кабинет
+				ul.mobile-menu__two-lvl
+					li.mobile-menu-el
+						span.modal-get(data-modal="enter") Вход
+					li.mobile-menu-el
+						span.modal-get(data-modal="registration") Регистрация
+
+	//slide mobile menu===end
 
 	//block footer end

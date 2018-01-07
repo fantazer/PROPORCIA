@@ -26,15 +26,51 @@ mixin header()
 		.header-nav
 			.main-cont
 				.header-nav__wrap
-					a(href="/").header-nav__logo
-						+icon("logo--md--color","icon")
-					.header-nav__menu
+					.header-nav__menu.header-nav__menu--mob
+						a(href="#mobile-menu").header-nav__menu-toggle
 						.header-nav__menu-icon
-							+icon("menu","icon")
+							+icon("burger","icon icon--menu")
+							+icon("close","icon icon--close")
 						.header-nav__menu-text Меню
+					a(href="/").header-nav__logo
+						+icon("logo--md--color","icon icon-logo-md")
+						+icon("logo--sm--color","icon icon-logo-sm")
+					.header-nav__menu.header-nav__menu--desct
+						a(href="#mobile-menu").header-nav__menu-toggle
+						.header-nav__menu-icon
+							+icon("menu","icon icon--menu")
+							+icon("close","icon icon--close")
+						.header-nav__menu-text Меню
+						.header-nav__drop
+							.header-nav__drop-list
+								-
+									var items = [
+										'Сеты',
+										'Роллы',
+										'Суши',
+										'Пицца',
+										'Пироги',
+										'Лапша WOK',
+										'Fast food',
+										'Бизнес-ланч',
+										'Комбо-меню',
+										'Супы',
+										'Паста',
+										'Гриль-меню',
+										'Салаты',
+										'Десерты',
+										'Напитки',
+										'Соусы'
+										];
+								each item in items
+									.header-nav__drop-list-el
+										a(href="#") #{item}
+							.header-nav__drop-img
+								.header-nav__drop-img-head
+								.header-nav__drop-img-text
 					.header-nav-info
 						.header-nav-info__phone
-							.header-nav-info__phone-number
+							a(href="tel:8 (3452)90-00-90").header-nav-info__phone-number
 								span 8 (3452)
 								| 90-00-90
 							.header-nav-info__phone-text Перезвоните мне
@@ -56,4 +92,5 @@ mixin header()
 							+icon("cart","icon")
 						.header-nav__cart-text 2500
 							.rub o
+
 	//block header end
