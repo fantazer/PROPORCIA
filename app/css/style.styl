@@ -335,7 +335,9 @@ select.select-beauty
 	justify-content: space-between
 	margin-bottom: 85px
 	margin-top: 50px
-
+.banner-item
+	+below(768px)
+		center(500px,10px)
 .banner-img
 	+below(768px)
 		width: 100%
@@ -398,6 +400,8 @@ select.select-beauty
 
 
 .footer
+	+below(768px)
+		margin-top: 20px
 	margin-top: 55px
 
 .footer-slim
@@ -546,6 +550,7 @@ select.select-beauty
 	+below(768px)
 		grid-template-columns: repeat(2, 1fr)
 	+below(640px)
+		center(460px,0px)
 		grid-template-columns: repeat(1, 1fr)
 	display grid
 	grid-template-columns: repeat(4, 1fr)
@@ -554,6 +559,7 @@ select.select-beauty
 .item-el
 	+below(640px)
 		flex-flow row
+		margin-bottom: 20px
 	f()
 	fl()
 	cp()
@@ -565,7 +571,7 @@ select.select-beauty
 			color white
 .item-el__wrapper
 	+below(640px)
-		width: 70%
+		width: calc(100px - 140px)
 	f()
 	fl()
 	border 1px solid #d9d9d9
@@ -576,6 +582,10 @@ select.select-beauty
 		padding: 8vw
 	+below(768px)
 		padding: 15vw
+	+below(640px)
+		min-width: 100px
+		width: 30%
+		padding:initial
 	bg-full()
 	padding: 6vw
 	display: block
@@ -586,11 +596,16 @@ select.select-beauty
 		fl()
 		align-items: flex-start
 		border-top 1px solid #d9d9d9
+		padding: 10px
+
 	padding: 20px
 	flex-grow 1
 .item-el__title
 	+below(640px)
-		font-size: 5vw
+		font-size: 18px
+		max-height: 50px
+		text-overflow ellipsis
+		overflow hidden
 	@extend .type--lg
 	display: inline
 	margin-bottom: 10px
@@ -920,28 +935,54 @@ select.select-beauty
 		right -25px
 
 .bread-row
+	+below(640px)
+		margin-top: 20px
 	flex(mid)
+	margin-top: 40px
 
 .card
+	+below(768px)
+		fw()
+	+below(640px)
+		margin-bottom: 30px
 	f()
 	justify-content: space-between
 	margin-bottom: 100px
-
+	align-items: flex-start
 .card-img
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
+		padding: 25vw 15vw
+	+below(640px)
+		padding: 30vw 15vw
 	width: 50%
-	padding: 20%
+	padding: 15vw
 	bg-full()
 
 .card-info
+	+below(1024px)
+		width: 45%
+	+below(768px)
+		width: 100%
 	width: 35%
 
 .card-info__title-top
+	+below(768px)
+		text-align: center
+	+below(640px)
+		margin-top: 0px
+		font-size: 28px
 	color $red
 	font-family Liana
-	margin-bottom: 20px
 	font-size: 48px
-
+	line-height: 1
+	margin-top: 40px
 .card-info__title
+	+below(768px)
+		text-align: center
+	+below(640px)
+		margin-bottom: 0
 	@extend .type--xxl
 	color white
 	margin-bottom: 20px
@@ -949,9 +990,14 @@ select.select-beauty
 .card-info__text
 	color white
 	line-height: 1.6
-	margin-bottom: 60px
+	margin-bottom: 40px
 
 .card-info__weight
+	+below(640px)
+		margin-bottom: 30px
+	padding: 15px 0
+	border-top 1px solid #545454
+	border-bottom 1px solid #545454
 	text-align: center
 	color white
 	margin-bottom: 60px
@@ -1331,7 +1377,7 @@ html.mm-opened
 	+below(640px)
 		f()
 		fl()
-		width: 15%
+		width: 40px
 	border 1px solid #d9d9d9
 	margin-left: -1px
 	display: none
