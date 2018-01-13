@@ -139,5 +139,108 @@ mixin footer()
 						| с 09:00 до 01:00
 
 	//slide mobile menu===end
+	.modal-layer
+		.modal-cont
+			.modal-filter
 
+			//modal-sale
+			.modal-wrap
+				.modal(data-modal="sale").modal-wrap__sale
+					.modal-content
+						.modal-close
+							+icon("close","icon")
+						.sale-modal__head
+							.sale-modal__head-title-sub Акция
+							.sale-modal__head-title Счастья полные часы
+						.sale-modal__img(style="background-image:url('img/discount.jpg')")
+						.sale-modal__content
+							p При заказе пирога - Хачапури в подарок Большой сырный Хачапури на слоеном тесте! Только по вторникам и четвергам с 14-00 до 17-00!
+							p *В акции не принимают участия Осетинские пироги! Звони: 90-00-90 PS: обязательно назови ПРОМО-КОД! Акция "Счастливые часы" с 14-00 до 17-00 действует для заказов на текущее время или предзаказов в этот промежуток времени.
+						.sale-modal__get
+							a(href="#").sale-modal__get-el.sale-modal__get-el--green Посмотреть в меню
+							a(href="#").sale-modal__get-el Рассказать друзьям
+				//modal-sale===end
+
+				//modal-fogot
+				.modal(data-modal="fogot").modal-wrap__fogot
+					.modal-content.modal-content--message
+						.modal-close
+							+icon("close","icon")
+						.modal-title Восстановление пароля
+						form(action="#")
+							input(type="text" placeholder="Телефон или Email").input
+							.btn-row--mid
+								input(type="submit" value="Напомнить пароль" class="btn--md-fix btn--mark")
+				//modal-fogot===end
+
+				//modal-reg
+				.modal(data-modal="enter").modal-wrap__regist
+					.modal-content
+						.modal-close
+							+icon("close","icon")
+						.modal-tab
+							.enter-modal__head
+								.enter-modal__head-el.tab-head.tab-head--active(data-tab="enter") Войти
+								.enter-modal__head-el.tab-head(data-tab="reg") Зарегистрироваться
+							.tab-cont__wrap
+								.enter-modal-tab.tab-cont.tab-cont--active(data-tab="enter")
+									.enter-modal__content
+										form(action="#").enter-modal__form-enter
+											input(type="text" placeholder="Телефон").input
+											input(type="text" placeholder="Email").input
+											.enter-modal__fogot
+												span.modal-get(data-modal="fogot") Забыли пароль?
+											.btn-row--mid
+												input(type="submit" value="Войти" class="btn--md-fix btn--mark")
+
+									.enter-modal__footer
+											.enter-modal__text.modal-get(data-modal="true-order") Или войдите через социальные сервисы
+											.soc-row
+												a(href="#").soc-el
+													+icon("soc-inst","icon")
+												a(href="#").soc-el
+													+icon("soc-twitter","icon")
+												a(href="#").soc-el
+													+icon("soc-facebook","icon")
+												a(href="#").soc-el
+													+icon("soc-vk","icon")
+								.enter-modal-tab.tab-cont(data-tab="reg")
+									.enter-modal__content
+										form(action="#").enter-modal__form-reg
+											input(type="text" placeholder="Телефон").input
+											input(type="text" placeholder="Email").input
+											input(type="password" placeholder="Пароль").input
+											input(type="password" placeholder="Повторить пароль").input
+											.btn-row--mid
+												input(type="submit" value="Войти" class="btn--md-fix btn--mark")
+									.enter-modal__footer
+										.enter-modal__footer-person.modal-get(data-modal="true-reg") Нажимая кнопку “Зарегистрироваться” <br> Вы соглашаетесь
+											a(href="#") с условиями обработки <br> персональных данных
+				//modal-reg===end
+
+				//modal-true
+				.modal(data-modal="true-order").modal-wrap__true
+					.modal-content.modal-content--message
+						.modal-close
+							+icon("close","icon")
+						.modal-title Спасибо!<br> Ваш заказ принят
+						.modal-text Вы можете проследить за ним <br> в личном кабинете
+						.btn-row--mid
+							.btn--md-fix.btn--mark.modal-close-btn Хорошо
+				//modal-true===end
+
+				//modal-true-reg
+				.modal(data-modal="true-reg").modal-wrap__true
+					.modal-content.modal-content--message
+						.modal-close
+							+icon("close","icon")
+						.modal-title Вы успешно <br> зарегистрированы
+						.modal-text Мы отправили письмо Вам ан почту
+						.btn-row--mid
+							.btn--md-fix.btn--mark.modal-close-btn Хорошо
+				//modal-true-reg===end
+
+	//modals
+
+	//modals===edn
 	//block footer end

@@ -23,6 +23,7 @@
   "devDependencies": {
     "jquery-nice-select": "^1.1.0",
     "jQuery.mmenu": "5.7.8",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "perfect-scrollbar": "^0.8.1"
   }
 }

@@ -6,7 +6,8 @@ mixin item()
 				+icon("percent","icon")
 			.item-mod-el.item-mod-el--new
 				+icon("New","icon")
-		a(href="#" style="background-image:url('img/item-1.jpg')").item-el__img
+		.item-el__img-wrap
+			a(href="#" style="background-image:url('img/item-1.jpg')").item-el__img
 		.item-el__wrapper
 			.item-el__content
 				a(href="#").item-el__title Суши с креветкой и ананасом

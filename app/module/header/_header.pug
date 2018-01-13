@@ -88,7 +88,7 @@ mixin header()
 								| с 09:00 до 01:00
 
 					//login
-					.header-nav__enter
+					.header-nav__enter.modal-get(data-modal="enter")
 						.header-nav__enter-icon
 							+icon("login","icon")
 						.header-nav__enter-text Войти
@@ -101,4 +101,34 @@ mixin header()
 							+icon("cart","icon")
 						.header-nav__cart-text 2500
 							.rub o
+						.cart-drop
+							.cart-drop__wrap.cart-drop__wrap--full.cart-drop__wrap--show
+								.cart-drop__list
+									- for (var i=0;i<8;i++)
+										.cart-drop__el
+											.cart-drop__name Суши с креветкой и ананасом #{i+1}
+											.cart-drop__incr
+												.incr
+													.incr__minus.incr__nav
+														+icon("minus","icon")
+													.incr__val
+														span 1
+														.incr__val-coner
+													.incr__plus.incr__nav
+														+icon("plus","icon")
+											.cart-drop__cost 350
+												span.rub o
+											.cart-drop__close
+												+icon("close","icon")
+								.cart-drop__info
+									.cart-drop__info-wrap
+										.cart-drop__info-title Итого:
+										.cart-drop__info-val 2350
+											span.rub o
+										.cart-drop__info-get Оформить заказ
+							.cart-drop__wrap.cart-drop__wrap--empty
+								.cart-empty__title Ваша корзина пуста
+								.cart-empty__text Самое время купить что-нибудь вкусного
+								a(href="#").cart-empty__get Перейти в  меню
+
 	//block header end

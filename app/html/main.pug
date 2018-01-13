@@ -6,8 +6,10 @@ include block_html/_include.pug
 	//banner
 	.main-cont.main-cont--mobile
 		.banner
-			.banner-img(style="background-image:url('img/main-banner.jpg')")
+			.banner-img-wrap
+				.banner-img(style="background-image:url('img/main-banner.jpg')")
 			.banner-state__col
+
 				a(href="#").banner-state
 					.flag
 						.flag-content
@@ -47,16 +49,18 @@ include block_html/_include.pug
 .section-content.section-content--news
 	.main-cont.main-cont--mobile
 		.title--section Новости и события
-		.news-list
+		.news-list.news-list--slider
 			- for (var i=0;i<2;i++)
 				.news-el
-					a(href="#" style="background-image:url('img/news.jpg')").news-el__img
+					.news-el__img-wrap
+						a(href="#" style="background-image:url('img/news.jpg')").news-el__img
 					.news-el__wrapper
 						a(href="#").news-el__title С 8 Марта! дорогие женщины
 						.news-el__text С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня
 						.news-el__date 05 Марта, 2017
 			.news-el
-				a(href="#" style="background-image:url('img/news.jpg')").news-el__img
+				.news-el__img-wrap
+					a(href="#" style="background-image:url('img/news.jpg')").news-el__img
 				.news-el__wrapper
 					a(href="#").news-el__title С 8 Марта! дорогие женщины
 					.news-el__text С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня

@@ -16,7 +16,8 @@ include block_html/_include.pug
 		.news-list.news-list--container
 			- for (var i=0;i<9;i++)
 				.news-el
-					a(href="#" style="background-image:url('img/news.jpg')").news-el__img
+					.news-el__img-wrap
+						a(href="#" style="background-image:url('img/news.jpg')").news-el__img
 					.news-el__wrapper
 						a(href="#").news-el__title С 8 Марта! дорогие женщины
 						.news-el__text С 8 марта "Пропорция" приготовил для вас новое меню!) Если вы хотите сделать предзаказ на 8 марта сегодня
