@@ -277,7 +277,7 @@ select.select-beauty
 	flex(mid)
 	fl()
 	width: 140px
-	z-index 10000
+	z-index 100
 	&:hover
 		.header-nav__cart-text
 			color $green
@@ -1179,6 +1179,10 @@ select.select-beauty
 	animation:  slideInDown  1s 1 ease-in-out
 	z-index 10
 	border-bottom 1px solid #e5e5e5
+	.header-nav__cart-icon
+		&>.icon
+			size 25px
+			margin-right: 10px
 	.head-slim
 		display: none
 	.header-nav__wrap
@@ -1629,9 +1633,11 @@ html.mm-opened
 	margin-bottom: 20px
 .soc-row
 	flex(mid)
+
 .soc-el
 	round()
 	flex(mid)
+	tr(all)
 	border 1px solid $border-color
 	size 44px
 	margin-right: 10px
@@ -1639,6 +1645,8 @@ html.mm-opened
 		margin-right: 0
 	.icon
 		size 18px
+	&:hover
+		border 1px solid black
 
 .enter-modal-tab
 	display: none
@@ -1730,8 +1738,10 @@ html.mm-opened
 		fw()
 		position: relative
 	flex(mid)
-	padding: 20px 0
+	padding: 20px 5px
 	border-top 1px solid $border-color
+	&:hover
+		background: rgba(0, 0, 0, 0.05)
 
 .cart-drop__name
 	+below(640px)
