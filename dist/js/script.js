@@ -228,13 +228,12 @@ $(document).ready(function(){
 	// mobile menu === end
 
 	//slide scroll menu
-	var shrinkHeader = 250;
+	var shrinkHeader = 350;
 	var heightHeader = $('.head').height();
-
 
 	$(window).scroll(function() {
 		var scroll = $(this).scrollTop();
-		if ( scroll >= shrinkHeader ) {
+		if ( scroll > shrinkHeader ) {
 				$('.head').addClass('shrink');
 				$('body').css('paddingTop',heightHeader);
 			}
@@ -245,7 +244,7 @@ $(document).ready(function(){
 	});
 
 	$(window).resize(function(){
-		heightHeader=$('.header').height();
+		heightHeader=$('.head').height();
 	});
 	//slide scroll menu===end
 

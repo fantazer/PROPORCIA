@@ -1,0 +1,66 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.pattern-black
+	+header()
+	.head-title
+		.head-title__text Личный кабинет
+	//bread
+	.bread-row
+		.bread
+			a(href="#").bread__el Пункт 1
+			a(href="#").bread__el Пункт 2
+			a(href="#").bread__el Пункт 3
+	.main-cont.main-cont--lk
+		.lk
+			.lk-data
+				.lk-data__title Личные данные
+				.lk-data__wrap
+					.book-row
+						.book-row__title Имя
+						.book-row__dot
+						.book-row__value Александр
+					.book-row
+						.book-row__title Телефон
+						.book-row__dot
+						.book-row__value 8 913 383 2924
+					.book-row
+						.book-row__title Email
+						.book-row__dot
+						.book-row__value Alex@mail.ru
+				.lk-data-get Редактировать
+			.lk-adr
+				.lk-adr__title Адрес
+				.lk-adr__wrap
+					.lk-adr__col
+						.book-row
+							.book-row__title Город
+							.book-row__dot
+							.book-row__value Санкт-Петербург
+						.book-row
+							.book-row__title Улица
+							.book-row__dot
+							.book-row__value Космонавтов
+						.book-row
+							.book-row__title Дом
+							.book-row__dot
+							.book-row__value 12
+					.lk-adr__col
+						.book-row
+							.book-row__title Подъезд
+							.book-row__dot
+							.book-row__value Санкт-Петербург
+						.book-row
+							.book-row__title Квартира
+							.book-row__dot
+							.book-row__value Космонавтов
+						.book-row
+							.book-row__title Домофон
+							.book-row__dot
+							.book-row__value 12
+
+				.lk-adr__get Редактировать
+
+.footer-slim
+	+footer()
+include ./block_html/_script.pug

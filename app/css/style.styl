@@ -1847,11 +1847,168 @@ html.mm-opened
 	@extend .btn--md-fix
 	@extend .btn--light
 
-
-
 .close-body
 	overflow: hidden
 	position: fixed
 	overflowY: scroll
 	width: 100%
 
+.lk
+	+below(640px)
+		margin-bottom: 40px
+	f()
+	fw()
+	justify-content: space-between
+	margin-bottom: 200px
+
+.lk-data
+	+below(1024px)
+		width: 100%
+		margin-bottom: 20px
+	+below(640px)
+		padding: 20px
+	width: 380px
+	background: $green
+	padding: 50px 40px
+	color white
+	.book-row__dot
+		border-bottom 1px dashed #ffffff7d
+
+.lk-data__title
+	@extend .type--lg
+	margin-bottom: 25px
+
+.book-row
+	margin-bottom: 20px
+	line-height: 1
+	&:last-child
+		margin-bottom: 0
+.book-row__title
+	display table-cell
+	 white-space nowrap
+
+.book-row__dot
+	display table-cell
+	border-bottom 1px dashed gray
+	width 100%
+
+.book-row__value
+	display table-cell
+	white-space nowrap
+
+.lk-data-get
+	@extend .btn--sm
+	@extend .btn--dark
+	+below(640px)
+		width: 100%
+.lk-adr
+	+below(1024px)
+		width: 100%
+	+below(640px)
+		padding: 20px
+	width: calc(100% - 400px)
+	padding: 50px 40px
+	background: white
+
+.lk-adr__wrap
+	+below(640px)
+		fw()
+		fl()
+		flex(mid)
+	f()
+	justify-content: space-between
+	margin-bottom: 35px
+
+.lk-data__wrap
+	margin-bottom: 35px
+
+.lk-adr__title
+	@extend .type--lg
+	margin-bottom: 25px
+
+.lk-adr__col
+	+below(640px)
+		width: 100%
+		&:first-child
+			margin-bottom: 20px
+	width: 45%
+
+.lk-adr__get
+	+below(640px)
+		width: 100%
+	@extend .btn--sm
+	@extend .btn--light
+
+.main-cont--lk
+	+below(1024px)
+		center(640px,10px)
+
+.review
+
+	f()
+	fw()
+	justify-content: space-between
+
+.review-cont
+	+below(768px)
+		width: 100%
+	width: 50%
+
+.review-el
+	+below(768px)
+		margin-bottom: 20px
+	margin-bottom: 50px
+
+.review-el__title
+	f()
+
+.review-el__title-text
+	@extend .type--md
+	margin-right: 20px
+
+.review-el__rating
+	f()
+	align-items: center
+
+.review-el__star
+	margin-right: 5px
+	.icon
+		fill $red
+		size 20px
+
+.review-el__val
+	color #484848
+	font-family Bebas
+	@extend .type--md
+//.review-el__text
+
+.review-more
+	+below(768px)
+		width: 100%
+	width: 380px
+
+.review-more__cont
+	+below(768px)
+		height: auto
+		padding: 10%
+	flex(mid)
+	fl()
+	width: 100%
+	height: 320px
+	border 1px solid black
+
+.review-more__title
+	@extend .type--lg
+	margin-bottom: 10px
+
+.review-more__title-sub
+	+below(768px)
+		margin-bottom: 20px
+	margin-bottom: 40px
+.review-more__get
+	@extend .btn--sm
+	@extend .btn--mark
+
+.main-cont--review
+	+below(768px)
+		center(640px,10px)

@@ -1,0 +1,38 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.pattern-black
+	+header()
+	.head-title
+		.head-title__sub Отзывы
+		.head-title__text Люди о нас
+
+	//bread
+	.bread-row
+		.bread
+			a(href="#").bread__el Пункт 1
+			a(href="#").bread__el Пункт 2
+			a(href="#").bread__el Пункт 3
+
+//list item
+.section-content
+	.main-cont.main-cont--review
+		.review
+			.review-cont
+				- for (var i=0;i<4;i++)
+					.review-el
+						.review-el__title
+							.review-el__title-text Екатерина Федорова
+							.review-el__rating
+								.review-el__star
+									+icon("star","icon")
+								.review-el__val 4.5
+						.review-el__text
+							p г.Заводоуковск, Администраторы молодцы! Всё очень вкусно! Я рада что такое заведение открылась в Заводоуковске так держать. И девочки молодцы и улыбчивые!
+			.review-more
+				.review-more__cont
+					.review-more__title Оставьте свой отзыв
+					.review-more__title-sub Вы поможете нам стать еще лучше!
+					.review-more__get Написать отзыв
++footer()
+include ./block_html/_script.pug
