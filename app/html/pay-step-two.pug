@@ -1,0 +1,55 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.pattern-black
+	+header-lk()
+
+.main-cont
+	.pay-form-cont
+		form(action="#")
+			.input-row
+				input(type="text" placeholder="*Имя").input
+			.input-row.input-row--half
+				.input-row__el
+					input(type="text" placeholder="*Телефон").input
+				.input-row__el
+					input(type="text" placeholder="Email").input
+			.form-toggle
+				.form-toggle__text.form-toggle__self.form-toggle__active Самовывоз
+				.form-toggle__control
+					span
+				.form-toggle__text.form-toggle__deliver Доставка
+			.form-deliver
+				.input-row
+					input(type="text" placeholder="*Улица").input
+				.input-row.input-row--three
+					.input-row__el
+						input(type="text" placeholder="*Дом").input
+					.input-row__el
+						input(type="text" placeholder="Квартира / Офис").input
+					.input-row__el
+						input(type="text" placeholder="Подъезд").input
+				.input-row.input-row--half.input-row--incr
+					.input-row__el
+						input(type="text" placeholder="Время доставки").input
+					.input-row__el
+						.form-incr
+							.form-incr__text Количество персон
+							.incr.incr-row
+								.incr__minus.incr__nav
+									+icon("minus","icon")
+								.incr__val
+									span 1
+									.incr__val-coner
+								.incr__plus.incr__nav
+									+icon("plus","icon")
+			textarea(name="", cols="30", rows="10" placeholder="Комментарий").textarea
+	.pay-cont.pay-cont--form
+		.pay-total
+			.pay-total__cost
+				.pay-total__text Итого:
+				.pay-total__val 2500
+					span.rub o
+			a(href="#").pay-total__get Оформить заказ
++footer()
+include ./block_html/_script.pug

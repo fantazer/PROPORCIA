@@ -1,5 +1,15 @@
 $(document).ready(function(){
 
+
+	//animate order-form
+	$('.form-toggle__control').click(function(){
+		$(this).toggleClass('form-toggle--active');
+		$('.form-toggle__self').toggleClass("form-toggle__active")
+		$('.form-toggle__deliver').toggleClass("form-toggle__active")
+		$('.form-deliver').slideToggle();
+	});
+	//animate order-form===end
+
 	// menu animation
 
 		//scroll menu
@@ -21,6 +31,27 @@ $(document).ready(function(){
 				});
 
 		});
+
+		$('.pay-drop__close').click(function(){
+			$(this).closest('.pay-drop__el').animate({
+					opacity: 0.25,
+					width: 0
+				}, 500, function() {
+					$(this).closest('.pay-drop__el').remove();
+
+			});
+		});
+
+		$('.pay-row__close').click(function(){
+			$(this).closest('.pay-row__el').animate({
+					opacity: 0.25,
+					width: 0
+				}, 500, function() {
+					$(this).closest('.pay-row__el').remove();
+
+			});
+		});
+
 		
 		//toggle menu list
 		$('.header-nav__menu--desct').click(function(event){
@@ -270,6 +301,22 @@ $(document).ready(function(){
 				}, 500, function() {
 					$(this).closest('.cart-drop__el').remove()
 				});
+
+				$(this).closest('.pay-drop__el').animate({
+					opacity: 0.25,
+					width: 0
+				}, 500, function() {
+					$(this).closest('.pay-drop__el').remove()
+				});
+
+				$(this).closest('.pay-row__el').animate({
+					opacity: 0.25,
+					width: 0
+				}, 500, function() {
+					$(this).closest('.pay-row__el').remove()
+				});
+
+				$(this).closest('.pay-order__el').remove();
 
 				cartScroll.perfectScrollbar('update');
 			}

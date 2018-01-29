@@ -1,6 +1,7 @@
 {
 	"block":{
 		"header":"header",
+		"header-lk":"header-lk",
 		"footer":"footer",
 		"item":"item"
 	},

@@ -1,1 +1,537 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<!--create by ANATOLY KUZNETSOV-->
 
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<!--colors-tabs-->
+		<meta name="theme-color" content="#000" />
+		<meta name="msapplication-navbutton-color" content="#000" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+		<link rel="shortcut icon" href="img/fav/favicon.ico" />
+		<!--SEO-->
+		<title>Document</title>
+		<meta name="description" itemprop="description" content="" />
+		<!--build:css css/vendor.css-->
+		<link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+		<link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
+		<link rel="stylesheet" href="bower/jQuery.mmenu/dist/css/jquery.mmenu.all.css" />
+		<link rel="stylesheet" href="bower/jQuery.mmenu/dist/extensions/effects/jquery.mmenu.effects.css" />
+		<link rel="stylesheet" href="bower/jQuery.mmenu/dist/extensions/themes/jquery.mmenu.themes.css" />
+		<link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
+		<link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
+		<link rel="stylesheet" href="bower/perfect-scrollbar/css/perfect-scrollbar.css" />
+		<!--endbuild-->
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-edit.css" />
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;amp;subset=cyrillic" rel="stylesheet" />
+	</head>
+	<!-- mixin nameMixin()-->
+	<!-- - var args = Array.prototype.slice.call(arguments)-->
+	<!-- - for item in args-->
+
+	<body>
+		<div class="pattern-black">
+			<div class="main-cont">
+				<div class="header-pay">
+					<a class="header-pay__logo" href="/">
+						<svg class="icon icon-logo-md">
+							<use xlink:href="#logo--md--color"></use>
+						</svg>
+						<svg class="icon icon-logo-sm">
+							<use xlink:href="#logo--sm--color"></use>
+						</svg>
+					</a>
+					<div class="header-pay__title">
+						<div class="header-pay__title-sub">Оформление заказа</div>
+						<div class="header-pay__title-text">Ваш заказ</div>
+					</div>
+					<div class="header-pay__back-wrap">
+						<div class="header-pay__back">
+							<svg class="icon">
+								<use xlink:href="#arrow-left"></use>
+							</svg>
+							<span>Вернуться назад</span>
+						</div>
+					</div>
+				</div>
+				<div class="pay-step-wrap">
+					<div class="pay-step">
+						<div class="pay-step__el pay-step__el--active">
+							<div class="pay-step__el-val">1</div>
+							<div class="pay-step__el-text">Ваш заказ</div>
+						</div>
+						<div class="pay-step__el pay-step__el--middle">
+							<div class="pay-step__el-val">2</div>
+							<div class="pay-step__el-text">Доставка и оплата</div>
+						</div>
+						<div class="pay-step__el">
+							<div class="pay-step__el-val">3</div>
+							<div class="pay-step__el-text">Заказ принят</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--block header-lk-->
+			<!--block header-lk end-->
+		</div>
+		<div class="main-cont">
+			<div class="pay-form-cont">
+				<form action="#">
+					<div class="input-row">
+						<input class="input" type="text" placeholder="*Имя" />
+					</div>
+					<div class="input-row input-row--half">
+						<div class="input-row__el">
+							<input class="input" type="text" placeholder="*Телефон" />
+						</div>
+						<div class="input-row__el">
+							<input class="input" type="text" placeholder="Email" />
+						</div>
+					</div>
+					<div class="form-toggle">
+						<div class="form-toggle__text form-toggle__self form-toggle__active">Самовывоз</div>
+						<div class="form-toggle__control">
+							<span></span>
+						</div>
+						<div class="form-toggle__text form-toggle__deliver">Доставка</div>
+					</div>
+					<div class="form-deliver">
+						<div class="input-row">
+							<input class="input" type="text" placeholder="*Улица" />
+						</div>
+						<div class="input-row input-row--three">
+							<div class="input-row__el">
+								<input class="input" type="text" placeholder="*Дом" />
+							</div>
+							<div class="input-row__el">
+								<input class="input" type="text" placeholder="Квартира / Офис" />
+							</div>
+							<div class="input-row__el">
+								<input class="input" type="text" placeholder="Подъезд" />
+							</div>
+						</div>
+						<div class="input-row input-row--half input-row--incr">
+							<div class="input-row__el">
+								<input class="input" type="text" placeholder="Время доставки" />
+							</div>
+							<div class="input-row__el">
+								<div class="form-incr">
+									<div class="form-incr__text">Количество персон</div>
+									<div class="incr incr-row">
+										<div class="incr__minus incr__nav">
+											<svg class="icon">
+												<use xlink:href="#minus"></use>
+											</svg>
+										</div>
+										<div class="incr__val">
+											<span>1</span>
+											<div class="incr__val-coner"></div>
+										</div>
+										<div class="incr__plus incr__nav">
+											<svg class="icon">
+												<use xlink:href="#plus"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<textarea class="textarea" name="" cols="30" rows="10" placeholder="Комментарий"></textarea>
+				</form>
+			</div>
+			<div class="pay-cont pay-cont--form">
+				<div class="pay-total">
+					<div class="pay-total__cost">
+						<div class="pay-total__text">Итого:</div>
+						<div class="pay-total__val">2500
+							<span class="rub">o</span>
+						</div>
+					</div>
+					<a class="pay-total__get" href="#">Оформить заказ</a>
+				</div>
+			</div>
+		</div>
+		<!--block footer-->
+		<div class="footer">
+			<!--footer dark-->
+			<div class="footer__dark">
+				<div class="main-cont main-cont--mobile">
+					<div class="footer__top">
+						<div class="scroll-top">
+							<svg class="icon">
+								<use xlink:href="#arrow-dirrect-up"></use>
+							</svg>
+						</div>
+						<div class="footer__list">
+							<a class="footer__list-el" href="#">Сеты</a>
+							<a class="footer__list-el" href="#">Роллы</a>
+							<a class="footer__list-el" href="#">Суши</a>
+							<a class="footer__list-el" href="#">Пицца</a>
+							<a class="footer__list-el" href="#">Пироги</a>
+							<a class="footer__list-el" href="#">Лапша WOK</a>
+							<a class="footer__list-el" href="#">Fast food</a>
+							<a class="footer__list-el" href="#">Бизнес-ланч</a>
+							<a class="footer__list-el" href="#">Комбо-меню</a>
+							<a class="footer__list-el" href="#">Супы</a>
+							<a class="footer__list-el" href="#">Паста</a>
+							<a class="footer__list-el" href="#">Гриль-меню</a>
+							<a class="footer__list-el" href="#">Салаты</a>
+							<a class="footer__list-el" href="#">Десерты</a>
+							<a class="footer__list-el" href="#">Напитки</a>
+							<a class="footer__list-el" href="#">Соусы</a>
+						</div>
+						<div class="footer-contact">
+							<div class="footer-contact__phone">
+								<a class="footer-contact__phone-el" href="tel:8 (3452) 68-10-89">8 (3452) 68-10-89</a>
+								<a class="footer-contact__phone-el" href="tel:8 (3452) 90-00-90">8 (3452) 90-00-90</a>
+							</div>
+							<div class="footer__time">
+								<div class="footer__time-el">Вс – Чт
+									<span></span>с 09:00 до 00:00</div>
+								<div class="footer__time-el">Пт – Сб
+									<span></span>с 09:00 до 01:00</div>
+							</div>
+						</div>
+						<div class="footer__pay footer__pay--dark">
+							<div class="footer__pay-row">
+								<div class="footer__pay-row__el">
+									<svg class="icon">
+										<use xlink:href="#master--light"></use>
+									</svg>
+								</div>
+								<div class="footer__pay-row__el footer__pay-row__el--visa">
+									<svg class="icon">
+										<use xlink:href="#visa--light"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="footer__pay-text">Вы можете оплатить покупки картой онлайн, либо выбрать другой способ оплаты.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--footer dark===end-->
+			<!--footer bottom-->
+			<div class="footer__bottom">
+				<div class="main-cont main-cont--mobile">
+					<div class="footer__bottom-wrap">
+						<div class="footer__copy">
+							<div class="footer__copy-text">© 2012-2016
+								<br> Ресторан доставки
+								<span>Pro-Porcia</span>
+							</div>
+							<a class="footer__copy-link" href="#">Политика конфиденциальности</a>
+							<a class="footer__copy-link" href="#">Публичная оферта</a>
+						</div>
+						<div class="footer__bottom-menu">
+							<a class="footer__bottom-menu-el" href="#">Акции</a>
+							<a class="footer__bottom-menu-el" href="#">Отзывы</a>
+							<a class="footer__bottom-menu-el" href="#">Доставка и оплата</a>
+							<a class="footer__bottom-menu-el" href="#">Новости</a>
+							<a class="footer__bottom-menu-el" href="#">Вакансии</a>
+							<a class="footer__bottom-menu-el" href="#">О компании</a>
+						</div>
+						<div class="footer__pay">
+							<div class="footer__pay-row">
+								<div class="footer__pay-row__el">
+									<svg class="icon">
+										<use xlink:href="#master"></use>
+									</svg>
+								</div>
+								<div class="footer__pay-row__el footer__pay-row__el--visa">
+									<svg class="icon">
+										<use xlink:href="#visa"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="footer__pay-text">Вы можете оплатить покупки картой онлайн, либо выбрать другой способ оплаты.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--footer bottom===end-->
+		</div>
+		<!--slide mobile menu-->
+		<div class="nav" id="mobile-menu">
+			<ul class="mobile-menu__one-lvl">
+				<li class="mobile-menu-el">
+					<a href="#">Меню ресторана</a>
+					<ul class="mobile-menu__two-lvl">
+						<li class="mobile-menu-el">
+							<a href="#">Сеты</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Роллы</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Суши</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Пицца</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Пироги</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Лапша WOK</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Fast food</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Бизнес-ланч</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Комбо-меню</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Супы</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Паста</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Гриль-меню</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Салаты</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Десерты</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Напитки</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Соусы</a>
+						</li>
+					</ul>
+					<li class="mobile-menu-el">
+						<a href="#">Меню ресторана</a>
+					</li>
+					<li class="mobile-menu-el">
+						<a href="#">Доставка и оплата</a>
+					</li>
+					<li class="mobile-menu-el">
+						<a href="#">Акции</a>
+					</li>
+					<li class="mobile-menu-el">
+						<a href="#">Отзывы</a>
+					</li>
+					<li class="mobile-menu-el">
+						<a href="#">Новости</a>
+					</li>
+					<li class="mobile-menu-el">
+						<a href="#">Вакансии</a>
+					</li>
+					<li class="mobile-menu-el">
+						<a href="#">О компании</a>
+					</li>
+				</li>
+				<li class="mobile-menu-el mobile-menu-el--sub">
+					<span>Личный кабинет</span>
+					<ul class="mobile-menu__two-lvl">
+						<li class="mobile-menu-el">
+							<span class="modal-get" data-modal="enter">Вход</span>
+						</li>
+						<li class="mobile-menu-el">
+							<span class="modal-get" data-modal="registration">Регистрация</span>
+						</li>
+					</ul>
+				</li>
+				<div class="mobile-menu__info">
+					<span class="mobile-menu__numb">8 (3452) 90-00-90</span>
+					<span class="mobile-menu__time">
+						<span class="mobile-menu__time-el">Вс – Чт
+							<span></span>с 09:00 до 00:00</span>
+						<span class="mobile-menu__time-el">Пт – Сб
+							<span></span>с 09:00 до 01:00</span>
+					</span>
+				</div>
+			</ul>
+		</div>
+		<!--slide mobile menu===end-->
+		<div class="modal-layer">
+			<div class="modal-cont">
+				<div class="modal-filter"></div>
+				<!--modal-sale-->
+				<div class="modal-wrap">
+					<div class="modal modal-wrap__sale" data-modal="sale">
+						<div class="modal-content">
+							<div class="modal-close">
+								<svg class="icon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+							<div class="sale-modal__head">
+								<div class="sale-modal__head-title-sub">Акция</div>
+								<div class="sale-modal__head-title">Счастья полные часы</div>
+							</div>
+							<div class="sale-modal__img" style="background-image:url('img/discount.jpg');"></div>
+							<div class="sale-modal__content">
+								<p>При заказе пирога - Хачапури в подарок Большой сырный Хачапури на слоеном тесте! Только по вторникам и четвергам с 14-00 до 17-00!</p>
+								<p>*В акции не принимают участия Осетинские пироги! Звони: 90-00-90 PS: обязательно назови ПРОМО-КОД! Акция "Счастливые часы" с 14-00 до 17-00 действует для заказов на текущее время или предзаказов в этот промежуток времени.</p>
+							</div>
+							<div class="sale-modal__get">
+								<a class="sale-modal__get-el sale-modal__get-el--green" href="#">Посмотреть в меню</a>
+								<a class="sale-modal__get-el" href="#">Рассказать друзьям</a>
+							</div>
+						</div>
+					</div>
+					<!--modal-sale===end-->
+					<!--modal-fogot-->
+					<div class="modal modal-wrap__fogot" data-modal="fogot">
+						<div class="modal-content modal-content--message">
+							<div class="modal-close">
+								<svg class="icon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+							<div class="modal-title">Восстановление пароля</div>
+							<form action="#">
+								<input class="input" type="text" placeholder="Телефон или Email" />
+								<div class="btn-row--mid">
+									<input class="btn--md-fix btn--mark" type="submit" value="Напомнить пароль" />
+								</div>
+							</form>
+						</div>
+					</div>
+					<!--modal-fogot===end-->
+					<!--modal-reg-->
+					<div class="modal modal-wrap__regist" data-modal="enter">
+						<div class="modal-content">
+							<div class="modal-close">
+								<svg class="icon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+							<div class="modal-tab">
+								<div class="enter-modal__head">
+									<div class="enter-modal__head-el tab-head tab-head--active" data-tab="enter">Войти</div>
+									<div class="enter-modal__head-el tab-head" data-tab="reg">Зарегистрироваться</div>
+								</div>
+								<div class="tab-cont__wrap">
+									<div class="enter-modal-tab tab-cont tab-cont--active" data-tab="enter">
+										<div class="enter-modal__content">
+											<form class="enter-modal__form-enter" action="#">
+												<input class="input" type="text" placeholder="Телефон" />
+												<input class="input" type="text" placeholder="Email" />
+												<div class="enter-modal__fogot">
+													<span class="modal-get" data-modal="fogot">Забыли пароль?</span>
+												</div>
+												<div class="btn-row--mid">
+													<input class="btn--md-fix btn--mark" type="submit" value="Войти" />
+												</div>
+											</form>
+										</div>
+										<div class="enter-modal__footer">
+											<div class="enter-modal__text modal-get" data-modal="true-order">Или войдите через социальные сервисы</div>
+											<div class="soc-row">
+												<a class="soc-el" href="#">
+													<svg class="icon">
+														<use xlink:href="#soc-inst"></use>
+													</svg>
+												</a>
+												<a class="soc-el" href="#">
+													<svg class="icon">
+														<use xlink:href="#soc-twitter"></use>
+													</svg>
+												</a>
+												<a class="soc-el" href="#">
+													<svg class="icon">
+														<use xlink:href="#soc-facebook"></use>
+													</svg>
+												</a>
+												<a class="soc-el" href="#">
+													<svg class="icon">
+														<use xlink:href="#soc-vk"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="enter-modal-tab tab-cont" data-tab="reg">
+										<div class="enter-modal__content">
+											<form class="enter-modal__form-reg" action="#">
+												<input class="input" type="text" placeholder="Телефон" />
+												<input class="input" type="text" placeholder="Email" />
+												<input class="input" type="password" placeholder="Пароль" />
+												<input class="input" type="password" placeholder="Повторить пароль" />
+												<div class="btn-row--mid">
+													<input class="btn--md-fix btn--mark" type="submit" value="Войти" />
+												</div>
+											</form>
+										</div>
+										<div class="enter-modal__footer">
+											<div class="enter-modal__footer-person modal-get" data-modal="true-reg">Нажимая кнопку “Зарегистрироваться”
+												<br> Вы соглашаетесь
+												<a href="#">с условиями обработки
+													<br> персональных данных</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--modal-reg===end-->
+					<!--modal-true-->
+					<div class="modal modal-wrap__true" data-modal="true-order">
+						<div class="modal-content modal-content--message">
+							<div class="modal-close">
+								<svg class="icon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+							<div class="modal-title">Спасибо!
+								<br> Ваш заказ принят</div>
+							<div class="modal-text">Вы можете проследить за ним
+								<br> в личном кабинете</div>
+							<div class="btn-row--mid">
+								<div class="btn--md-fix btn--mark modal-close-btn">Хорошо</div>
+							</div>
+						</div>
+					</div>
+					<!--modal-true===end-->
+					<!--modal-true-reg-->
+					<div class="modal modal-wrap__true" data-modal="true-reg">
+						<div class="modal-content modal-content--message">
+							<div class="modal-close">
+								<svg class="icon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+							<div class="modal-title">Вы успешно
+								<br> зарегистрированы</div>
+							<div class="modal-text">Мы отправили письмо Вам ан почту</div>
+							<div class="btn-row--mid">
+								<div class="btn--md-fix btn--mark modal-close-btn">Хорошо</div>
+							</div>
+						</div>
+					</div>
+					<!--modal-true-reg===end-->
+				</div>
+			</div>
+		</div>
+		<!--modals-->
+		<!--modals===edn-->
+		<!--block footer end-->
+		<!--build:js js/combined.js-->
+		<script src="bower/jquery/dist/jquery.js"></script>
+		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
+		<script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+		<script src="bower/jQuery.mmenu/dist/js/jquery.mmenu.all.min.umd.js"></script>
+		<script src="bower/slick-carousel/slick/slick.js"></script>
+		<script src="bower/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+		<!--script(src='bower/owl.carousel/dist/owl.carousel.min.js')-->
+		<!--script(src="js/jquery.smoothscroll.js")-->
+		<!-- endbuild-->
+		<script src="js/script.js"></script>
+		<script src="js/script-edit.js"></script>
+	</body>
+
+</html>

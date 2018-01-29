@@ -1,0 +1,26 @@
+mixin header-lk()
+	.main-cont
+		.header-pay
+			a(href="/").header-pay__logo
+				+icon("logo--md--color","icon icon-logo-md")
+				+icon("logo--sm--color","icon icon-logo-sm")
+			.header-pay__title
+				.header-pay__title-sub Оформление заказа
+				.header-pay__title-text Ваш заказ
+			.header-pay__back-wrap
+				.header-pay__back
+					+icon("arrow-left","icon")
+					span Вернуться назад
+		.pay-step-wrap
+			.pay-step
+				.pay-step__el.pay-step__el--active
+					.pay-step__el-val 1
+					.pay-step__el-text Ваш заказ
+				.pay-step__el.pay-step__el--middle
+					.pay-step__el-val 2
+					.pay-step__el-text Доставка и оплата
+				.pay-step__el
+					.pay-step__el-val 3
+					.pay-step__el-text Заказ принят
+	//block header-lk
+	//block header-lk end

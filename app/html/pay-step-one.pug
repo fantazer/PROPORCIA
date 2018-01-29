@@ -1,0 +1,53 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.pattern-black
+	+header-lk()
+
+.main-cont
+	.pay-cont
+		.pay-row__list
+			- for (var i=0;i<8;i++)
+				.pay-row__el
+					.pay-row__name Суши с креветкой и ананасом #{i + 1}
+					.pay-row__incr
+						.incr
+							.incr__minus.incr__nav
+								+icon("minus","icon")
+							.incr__val
+								span 1
+								.incr__val-coner
+							.incr__plus.incr__nav
+								+icon("plus","icon")
+					.pay-row__cost 350
+						span.rub o
+					.pay-row__close
+						+icon("close","icon")
+		.pay-order-text С заказом идут 2 порции соевых соуса, 2 порции имбиря.(Вы можете добавить дополнительные порции)
+		.pay-order-list
+			- for (var i=0;i<5;i++)
+				.pay-order__el
+					.pay-order__el-img-wrap
+						.pay-order__el-img(style="background-image:url('img/item-1.jpg')")
+					.pay-order__el-cont
+						.pay-order__el-title Соевый соус
+						.pay-order__el-cost 20
+							span.rub o
+					.pay-order__el-inc
+						.incr.incr-row.incr-row--white
+							.incr__minus.incr__nav
+								+icon("minus","icon")
+							.incr__val
+								span 1
+								.incr__val-coner
+							.incr__plus.incr__nav
+								+icon("plus","icon")
+		.pay-total
+			.pay-total__cost
+				.pay-total__text Итого:
+				.pay-total__val 2500
+					span.rub o
+			a(href="#").pay-total__get Оформить заказ
+
++footer()
+include ./block_html/_script.pug

@@ -1,0 +1,16 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.pattern-black
+	+header-lk()
+
+.main-cont
+	.order-true
+		.order-true__wrap
+			.order-true__icon
+				+icon("check","icon")
+			.order-true__title Спасибо! Ваш заказ принят
+			.order-true__text Вы можете проследить за ним в личном кабинете
+			a(href="#").order-true__get в личный кабинет
++footer()
+include ./block_html/_script.pug
