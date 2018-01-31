@@ -48,14 +48,15 @@ body
 .incr__nav
 	cp()
 .marked
-	background: linear-gradient(to right, rgba(255,255,255,0) 50.5%, black 49.5%)
-	background-size: 200%
-	background-position: 0 0
-	transition: .5s ease-in-out
-	display: inline
-	&:hover
-		background-position: -99.999% 0;
-		color white
+	+above(1024px)
+		background: linear-gradient(to right, rgba(255,255,255,0) 50.5%, black 49.5%)
+		background-size: 200%
+		background-position: 0 0
+		transition: .5s ease-in-out
+		display: inline
+		&:hover
+			background-position: -99.999% 0;
+			color white
 
 .nice-select
 	br(0)
@@ -283,7 +284,8 @@ select.select-beauty
 	&:hover
 		.header-nav__cart-text
 			color $green
-
+		.icon
+			fill black
 .header-nav__cart-icon
 	position: relative
 	.icon
@@ -563,6 +565,7 @@ select.select-beauty
 	+below(640px)
 		flex-flow row
 		margin-bottom: 20px
+		min-height 110px
 	f()
 	fl()
 	cp()
@@ -570,8 +573,10 @@ select.select-beauty
 	background: white
 	&:hover
 		.item-el__title
-			background-position: -99.999% 0
-			color white
+			+above(1024px)
+				background-position: -99.999% 0
+				color white
+
 .item-el__wrapper
 	+below(640px)
 		width: calc(100px - 140px)
@@ -581,6 +586,8 @@ select.select-beauty
 	border-top: 0
 	flex-grow 1
 .item-el__img
+	+below(640px)
+		padding: 45%
 	bg-full()
 	padding: 35%
 	display: block
@@ -589,6 +596,8 @@ select.select-beauty
 .item-el__img-wrap
 	+below(640px)
 		width: 35%
+		height: auto
+		overflow: hidden
 .item-el__content
 	+below(640px)
 		f()
@@ -606,15 +615,16 @@ select.select-beauty
 		text-overflow ellipsis
 		overflow hidden
 	@extend .type--lg
-	display: inline
-	margin-bottom: 10px
-	background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, black 50%)
-	background-position: -0% 0
-	background-size: 200.3% auto
-	transition: background-position 0.5s ease-out, color .8s
-	&:hover
-		background-position: -99.999% 0
-		color white
+	+above(1024px)
+		display: inline
+		margin-bottom: 10px
+		background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, black 50%)
+		background-position: -0% 0
+		background-size: 200.3% auto
+		transition: background-position 0.5s ease-out, color .8s
+		&:hover
+			background-position: -99.999% 0
+			color white
 
 .item-el__text
 	+below(640px)
@@ -679,11 +689,12 @@ select.select-beauty
 .item-el-slider
 	+below(1024px)
 		grid-column: 1 / 4
+		display: none
 	+below(768px)
 		grid-column: 1 / 3
 	+below(640px)
 		grid-column: 1 / 2
-	background:gray
+	//background:gray
 	grid-column: 3 / 5
 
 .item-el__incr
@@ -815,8 +826,9 @@ select.select-beauty
 	fl()
 	&:hover
 		.news-el__title
-			background-position: -99.999% 0
-			color white
+			+above(1024px)
+				background-position: -99.999% 0
+				color white
 .news-el__img
 
 	bg-full()
@@ -1050,6 +1062,9 @@ select.select-beauty
 	@extend .btn--sm
 	@extend .btn--light
 	margin-left: 20px
+
+.filter-get__el--active
+	border 1px solid black
 
 .filter
 	+below(768px)
@@ -1318,8 +1333,9 @@ html.mm-opened
 .header-nav__drop.header-nav__drop--show
 	display: block
 	height: auto
-	width: 100%
-	padding: 5%
+	width: calc(100% + 2px)
+	margin-left: 1px px
+	padding: 50px
 	clip initial
 	margin:0
 	opacity: 1
@@ -1419,6 +1435,7 @@ html.mm-opened
 		f()
 		fl()
 		width: 40px
+		height: auto
 	border 1px solid #d9d9d9
 	margin-left: -1px
 	display: none
@@ -1436,6 +1453,7 @@ html.mm-opened
 			fill $green
 	height: 100%
 	flex(mid)
+	flex-grow 1
 
 //modals
 .modal-layer
@@ -1603,6 +1621,8 @@ html.mm-opened
 
 //.modal-get
 .enter-modal__content
+	+below(640px)
+		padding: 20px
 	padding: 10%
 	.btn-row--mid
 		margin-top: 30px
@@ -1626,10 +1646,12 @@ html.mm-opened
 			bottom -5px
 			left: 0
 .enter-modal__footer
+	+below(640px)
+		padding: 0px
 	background: #f8f8f8
 	flex(mid)
 	fl()
-	padding: 40px 0
+	padding-bottom: 40px
 .enter-modal__text
 	color #575757
 	margin-bottom: 20px
@@ -1684,12 +1706,14 @@ html.mm-opened
 .cart-drop.cart-drop--show
 	+below(640px)
 		height: 100vh
+		padding: 20px
 	display: block
 	height: auto
-	width: 100%
-	padding: 5% 3%
+	width: calc(100% + 2px)
+	padding: 50px 30px
 	clip initial
 	margin:0
+	margin-left: -1px
 	opacity: 1
 //mobile menu===end
 
@@ -2469,3 +2493,87 @@ html.mm-opened
 .order-true__get
 	@extend .btn--md-fix
 	@extend .btn--mark
+
+.header-nav__cart--active
+	.icon
+		fill black
+
+input.btn--md-fix
+	display: inline-block !important
+
+.item-el-slider-wrap
+	height: 100%
+	width: 100%
+	background: green
+	.slick-slide
+		height: 100%!important
+		&>div
+			height: 100%!important
+
+	.slick-list,
+	.slick-track
+		height: 100%
+
+.item-el-slider__el
+	display: flex !important
+	flex(mid)
+	bg-full()
+	width: 100%
+	height: 100%
+	position: relative
+	color white
+	.filter
+		position: absolute
+		top 0
+		left 0
+		width: 100%
+		height: 100%
+		background: rgba(0, 0, 0, 0.6)
+
+.item-slider__cont
+	flex(mid)
+	fl()
+	padding: 10% 0
+	position: relative
+	border 1px solid #8b8b8b
+	width: 80%
+	margin-top: -20px
+.item-slider__title
+	text-align: center
+	@extend .type--xl
+	margin-bottom: 5%
+
+.item-slider__info
+	f()
+.item-slider__info-el
+	&:nth-child(2)
+		border-left 1px solid #8b8b8b
+		border-right 1px solid #8b8b8b
+	flex(mid)
+	fl()
+	padding: 15px 20px
+	width: 100px
+.item-slider__info-el-val
+	@extend .type--lg
+.item-slider__info-el-txt
+	opacity .6
+	text-align: center
+
+.item-slider__nav
+	position: absolute
+	right: -1px
+	bottom: -55px
+	f()
+	.icon
+		tr(all)
+		size 25px
+		fill #8b8b8b
+		&:hover
+			fill white
+.item-slider__nav-el
+	cp()
+	flex(mid)
+	size 55px
+	border 1px solid #8b8b8b
+	z-index 10
+	margin-left: -1px

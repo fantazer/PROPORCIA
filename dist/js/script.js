@@ -1,5 +1,19 @@
 $(document).ready(function(){
 
+	//slider
+	$('.item-el-slider-wrap').slick({
+		slidesToShow: 1,
+		autoplay: false,
+		speed: 1200,
+		fade: true,
+		cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+		touchThreshold: 100,
+		dots:false,
+		arrows: true,
+		prevArrow: $('.item-slider__nav-el--left'),
+		nextArrow: $('.item-slider__nav-el--right')
+	});
+	//slider===end
 
 	//animate order-form
 	$('.form-toggle__control').click(function(){
@@ -33,20 +47,25 @@ $(document).ready(function(){
 		});
 
 		$('.pay-drop__close').click(function(){
-
 			$(this).closest('.pay-drop__el').animate({
 					opacity: 0.25,
 					width: 0
 				}, 500, function() {
-					$(this).closest('.pay-drop__el').remove()
-					if($('.pay-drop__list').find(".pay-drop__el").size() < 1){
-						$('.pay-drop__wrap--full').removeClass('pay-drop__wrap--show');
-						$('.pay-drop__wrap--empty').addClass('pay-drop__wrap--show');
-						cartScroll.perfectScrollbar('update');
-					}
-				});
+					$(this).closest('.pay-drop__el').remove();
 
+			});
 		});
+
+		$('.pay-row__close').click(function(){
+			$(this).closest('.pay-row__el').animate({
+					opacity: 0.25,
+					width: 0
+				}, 500, function() {
+					$(this).closest('.pay-row__el').remove();
+
+			});
+		});
+
 		
 		//toggle menu list
 		$('.header-nav__menu--desct').click(function(event){
@@ -66,6 +85,7 @@ $(document).ready(function(){
 		//toggle cart
 		$('.header-nav__cart').click(function(event){
 			event.stopPropagation();
+			$(this).addClass('header-nav__cart--active');
 			cartScroll.perfectScrollbar('update');
 			$('.cart-drop').toggleClass('cart-drop--show');
 				$('.header-nav__drop').removeClass('header-nav__drop--show');
@@ -75,6 +95,7 @@ $(document).ready(function(){
 		});
 		$(document).on("click", function () {
 				$('.cart-drop').removeClass('cart-drop--show');
+				$('.header-nav__cart').removeClass('header-nav__cart--active');
 				$('body').removeClass('close-body');
 		});
 		if($(window).width()<=640){
@@ -302,6 +323,13 @@ $(document).ready(function(){
 					width: 0
 				}, 500, function() {
 					$(this).closest('.pay-drop__el').remove()
+				});
+
+				$(this).closest('.pay-row__el').animate({
+					opacity: 0.25,
+					width: 0
+				}, 500, function() {
+					$(this).closest('.pay-row__el').remove()
 				});
 
 				$(this).closest('.pay-order__el').remove();

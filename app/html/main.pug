@@ -30,7 +30,47 @@ include block_html/_include.pug
 		.item-wrap
 			- for (var i=0;i<6;i++)
 				+item()
-			.item-el-slider as
+			.item-el-slider
+				.item-el-slider-wrap
+					.item-el-slider__el(style="background-image:url('img/item-2.jpg')")
+						.filter
+						.item-slider__cont
+							.item-slider__title Суши
+							.item-slider__info
+								.item-slider__info-el
+									.item-slider__info-el-val 03
+									.item-slider__info-el-txt Акции
+								.item-slider__info-el
+									.item-slider__info-el-val 12
+									.item-slider__info-el-txt Новинок
+								.item-slider__info-el
+									.item-slider__info-el-val 24
+									.item-slider__info-el-txt Позиций
+							.item-slider__nav
+								.item-slider__nav-el.item-slider__nav-el--left
+									+icon("arrow-dirrect-left","icon")
+								.item-slider__nav-el.item-slider__nav-el--right
+									+icon("arrow-dirrect-right","icon")
+
+					.item-el-slider__el(style="background-image:url('img/item-1.jpg')")
+						.filter
+						.item-slider__cont
+							.item-slider__title Роллы
+							.item-slider__info
+								.item-slider__info-el
+									.item-slider__info-el-val 04
+									.item-slider__info-el-txt Акции
+								.item-slider__info-el
+									.item-slider__info-el-val 11
+									.item-slider__info-el-txt Новинок
+								.item-slider__info-el
+									.item-slider__info-el-val 81
+									.item-slider__info-el-txt Позиций
+							.item-slider__nav
+								.item-slider__nav-el.item-slider__nav-el--left
+									+icon("arrow-dirrect-left","icon")
+								.item-slider__nav-el.item-slider__nav-el--right
+									+icon("arrow-dirrect-right","icon")
 
 //section-sale
 .section-sale
