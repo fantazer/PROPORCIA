@@ -85,13 +85,15 @@ select.select-beauty
 	border 1px solid $border-color
 
 .flag
+	flex(mid)
 	width: 50px
 	height: 65px
 	background: $green
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%)
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%)
-	flex(mid)
-
+	position: absolute
+	top 0
+	right: 20px
 .flag-content
 	.icon
 		size 25px
@@ -382,10 +384,7 @@ select.select-beauty
 	padding: 2vw
 	&:hover
 		background: $green
-	.flag
-		position: absolute
-		top 0
-		right: 20px
+
 
 .banner-state__title
 	+below(1024px)
@@ -2577,3 +2576,78 @@ input.btn--md-fix
 	border 1px solid #8b8b8b
 	z-index 10
 	margin-left: -1px
+
+.deliver-map
+	+below(640px)
+		padding: 30%
+	padding: 20%
+	background: gray
+	margin-bottom: 20px
+.deliver
+	+below(968px)
+		grid-template-columns: repeat(1, 1fr)
+	grid-template-columns: repeat(3, 1fr)
+	display: grid
+	grid-gap: 20px
+.deliver__col
+	+below(768px)
+
+		padding: 20px
+	background: white
+	position: relative
+	padding: 40px
+	.flag
+		+below(768px)
+			right: 20px
+		right: 40px
+.deliver__head
+	padding-bottom: 20px
+	border-bottom:1px solid #dddddd
+	margin-bottom: 30px
+.deliver__head-title
+	@extend .type--xl
+	line-height: 1
+	margin-bottom: 10px
+.deliver__head-title-sub
+	@extend .type--md
+.deliver__content
+	p
+		margin-top: 0
+	ul
+		padding-left: 0px
+		list-style none
+		li
+			padding-left: 10px
+			position: relative
+			&:before
+				content "-"
+				position: absolute
+				top 0
+				left 0
+.text--green
+	color green
+.deliver__content-title
+	@extend .type--md
+	margin-bottom: 10px
+
+.deliver__head-title--sm
+	@extend .type--md
+	margin-bottom: 10px
+
+.deliver__link
+	cp()
+	display: inline
+	border-bottom: 1px dashed black
+
+.pattern-black--deliver
+	padding-bottom: 50px
+	margin-bottom: 50px
+
+.modal-wrap__deliver
+	padding: 10%
+	width: 600px
+	.modal-title
+		text-align: left
+	.modal-text
+		text-align: left
+

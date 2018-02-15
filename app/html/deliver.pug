@@ -1,0 +1,65 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.pattern-black.pattern-black--deliver
+	+header()
+	.head-title
+		.head-title__text Доставка и оплата
+	//bread
+	.bread-row
+		.bread
+			a(href="#").bread__el Пункт 1
+			a(href="#").bread__el Пункт 2
+			a(href="#").bread__el Пункт 3
+	.main-cont
+		.deliver-map
+		.deliver
+			.deliver__col
+				.flag
+					.flag-content
+						+icon("box","icon")
+				.deliver__head
+					.deliver__head-title Доставка
+					.deliver__head-title-sub Бесплатная доставка от 500 руб.
+				.deliver__content
+					p Стоимость доставки в отдаленные районы и за пределы города – уточняйте у оператора.
+					p Вы можете забрать свой заказ самостоятельно.
+					p При заказе любимого блюда выберите удобный для вас пункт выдачи.
+					p.text--green При самовывозе дарим подарок!
+			.deliver__col
+				.flag
+					.flag-content
+						+icon("bonus","icon")
+				.deliver__head
+					.deliver__head-title Оплата
+				.deliver__content
+					.deliver__content-title Наличный расчёт
+					p При доставке курьером, оплата осуществляется наличными. При получении товара обязательно проверьте комплектацию товара, наличие гарантийного талона и чека.
+					.deliver__content-title Банковской картой
+					p Оплата происходит через ПАО СБЕРБАНК с использованием Банковских карт следующих платежных систем:
+					ul
+						li МИР
+						li VISA International
+						li Mastercard Worldwide
+			.deliver__col
+				.deliver__head
+					.deliver__head-title--sm ПРОЦЕСС ПЕРЕДАЧИ ДАННЫХ
+					.deliver__link.modal-get(data-modal="deliver-text") Оплата через банковскую карту онлайн
+				.deliver__content
+					.deliver__content-title ВОЗВРАТ ТОВАРА
+					.deliver__link.modal-get(data-modal="deliver-text") Возврат денежных средств на банковскую карту клиента
+
+.section-slogan
+	.slogan
+		.slogan-title-top Proporcia
+		.slogan-title Мы спасаем от голода всю Тюмень уже 5 лет!
+		.slogan-img(style="background-image:url('img/boorder.png')")
+		.slogan-text Ресторан доставки «Pro-Porcia» радует Тюмень вкусной едой уже 5 лет. В нашем ассортименте есть роллы, сеты, пицца, ВОКи, паста, бургеры, десерты и многое другое! Приоритетами в своей работе мы считаем безупречное качество еды и высокий уровень сервиса.
+		.slogan-info
+			.slogan-info__text Cлужба контроля качества «Pro-Porcia»:
+			.slogan-info__numb +7 (3452) 68-10-89
+			a(href="#").slogan-info__link pro.porcia@mail.ru.
+
++footer()
+
+include ./block_html/_script.pug
