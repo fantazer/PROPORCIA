@@ -128,63 +128,57 @@ $(document).ready(function(){
 
 
 	//modal
-
-	$('.modal-content').click(function(event){
-		event.stopPropagation();
+//modals
+$('.modal-content').click(function(event){
+	event.stopPropagation();
+});
+var scrollPos = 0;
+var openModal = function () {
+if(!$('.modal-layer').hasClass('modal-layer-show')){
+	$('.modal-layer').addClass('modal-layer-show');
+}
+ scrollPos = $(window).scrollTop();
+	$('body').css({
+		overflow: 'hidden',
+		position: 'fixed',
+		overflowY: 'scroll',
+		top : -scrollPos,
+		width:'100%'
 	});
-	var scrollPos = 0;
+	return scrollPos;
+};
 
-	var openModal = function () {
-	if(!$('.modal-layer').hasClass('modal-layer-show')){
-		$('.modal-layer').addClass('modal-layer-show');
-	}
-	 scrollPos = $(window).scrollTop();
-		$('body').css({
-			overflow: 'hidden',
-			position: 'fixed',
-			overflowY: 'scroll',
-			top : -scrollPos,
-			width:'100%'
-		});
-		return scrollPos;
-	};
+var closeModal = function () {
+   $('.modal').removeClass('modal__show');
+ 	$('.modal-layer').removeClass('modal-layer-show');
+ 	$("body").removeClass("modal-fix");
+ 	$('body').css({
+		overflow: '',
+		position: '',
+		top: ''
+	})
+   $(window).scrollTop(scrollPos);
+};
 
-	var closeModal = function () {
-		console.log("scrollPos",scrollPos);
-  	$('.modal-layer').removeClass('modal-layer-show');
-  	$("body").removeClass("modal-fix");
-  	$('body').css({
-			overflow: '',
-			position: '',
-			top: ''
-		})
-    $(window).scrollTop(scrollPos);
-    $('.modal').removeClass('modal__show');
-	};
-
-	var initModal = function(el){
-		openModal();
-		$('.modal').each(function () {
-			if ($(this).data('modal')===el){
-				$(this).addClass('modal__show')
-			} else {
-				$(this).removeClass('modal__show')
-			}
-		});
-		var modalHeightCont = $(window).height();
-		$('.modal-filter').height(modalHeightCont);
-		$('.modal-wrap').css('height',modalHeightCont );
-		$('.modal-wrap').css('minHeight',modalHeightCont );
-	}
-
-	$('.modal-get').click(function (){
-		var currentModal = $(this).data("modal");
-		initModal(currentModal);
+var initModal = function(el){
+	openModal();
+	$('.modal').each(function () {
+		if ($(this).data('modal')===el){
+			$(this).addClass('modal__show')
+		} else {
+			$(this).removeClass('modal__show')
+		}
 	});
+};
 
-	$('.modal-layer , .modal-close , .modal-close-btn').click(function (){
-		closeModal();
-	});
+$('.modal-get').click(function (){
+	var currentModal = $(this).data("modal");
+	initModal(currentModal);
+});
+
+$('.modal-layer , .modal-close').click(function (){
+	closeModal();
+});
 	//modal===end
 
 

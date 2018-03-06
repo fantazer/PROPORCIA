@@ -1457,7 +1457,7 @@ html.mm-opened
 //modals
 .modal-layer
 	width: 100%
-	height: 100vh
+	height: 100%
 	position: fixed
 	z-index 1000
 	top 0
@@ -1465,10 +1465,22 @@ html.mm-opened
 	visibility: hidden
 	transition all 1s // duration for fade
 	opacity 0
+	overflow auto
+	background: rgba(0,0,0,0.5)
+	text-align: center
+	//padding: 20px 0
+	&:after
+		display: inline-block
+		vertical-align: middle
+		width: 0
+		height: 100%
+		content: ''
 
 .modal-layer-show
+
 	visibility: visible
 	opacity 1
+	transition opacity 1.4s
 
 .modal-cont
 	width: 100%
@@ -1489,28 +1501,34 @@ html.mm-opened
 	min-height 100vh
 
 .modal
-	+below(768px)
-		width: 100%
-		box-shadow 0 0 0
-	+below(640px)
-		top 0
-		left 0
 	box-shadow 0 2px 4px rgba(0, 0, 0, 0.24)
-	transform translate(-50%,-350%)
+	display: inline-block
+	vertical-align: middle
+	transform translateY(-20%)
+	height: 1px
+	margin: -1px
+	width: 1px
+	padding: 0
+	clip rect(1px 1px 1px 1px)
+	opacity: 0
+	overflow: hidden
 	position: absolute
-	top 50%
-	left 50%
-	opacity .1
-	transition transform .8s, opacity 1s
+.modal.modal__show
+	transform translateY(0%)
+	height: auto
+	clip initial
+	margin:0
+	opacity: 1
+	width: auto
+
+	transition transform 1.2s
+	position: relative
 
 .modal-content
-	+below(768px)
-		width: 80%
-	+below(640px)
-		max-height calc(100vh - 80px)
-		overflow-y scroll
-		width: 100%!important
 
+	+below(640px)
+
+		max-width 320px
 	form
 		width: 100%
 		.input
@@ -1519,13 +1537,6 @@ html.mm-opened
 	background: white
 	width: 500px
 
-.modal__show
-	+below(768px)
-		flex(mid)
-	+below(640px)
-		transform translate(0%,0%)
-	opacity 1
-	transform translate(-50%,-50%)
 
 .modal-close
 	position: absolute
@@ -1645,8 +1656,7 @@ html.mm-opened
 			bottom -5px
 			left: 0
 .enter-modal__footer
-	+below(640px)
-		padding: 0px
+
 	background: #f8f8f8
 	flex(mid)
 	fl()
